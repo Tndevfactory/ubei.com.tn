@@ -16,7 +16,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Tndev Art index</title>
+        <title>Tndev Art</title>
         <meta
           name="google-site-verification"
           content="oWPG0Wtv_qIrPDPKZNXlIHgtAD7TnKYAE_ptUSEwP2o"
@@ -33,7 +33,7 @@ export default function Index() {
         <meta property="og:title" content="web artist for artisans" />
         <meta property="og:description" content="market place." />
         <meta property="og:image" content="https://i.ibb.co/xzk4HFF/back.png" />
-        <link rel="alternate" href="https://tndev-art.tn/" hrefLang="en" />
+        <link rel="alternate" href="https://tndev-art.tn/ar" hrefLang="en" />
         <link rel="alternate" href="https://tndev-art.tn/fr" hrefLang="fr" />
         <link rel="alternate" href="https://tndev-art.tn/en" hrefLang="ar" />
         <script
@@ -65,24 +65,14 @@ export default function Index() {
         />
       </Head>
       <Navbar />
-      <Container
-        maxWidth="xl"
-        sx={{ marginTop: "1rem", backgroundColor: "plum" }}
-      >
-        {/* <ActiveLink children="home active link" href="/" />
-        <ActiveLink children="about active link" href="/about" /> */}
-        <MuiLink color="inherit" href="https://mui.com/">
-          mui.com MuiLink
-        </MuiLink>{" "}
-        <Link href="/">Go to the about page // src Link</Link>
+      <Container maxWidth="xl" sx={{ marginTop: "1rem" }}>
         <Box sx={{ my: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom>
-            Next.js example
+            tndev-art under construction
           </Typography>
           <Link href="/about" color="secondary">
-            Go to the about page==
+            about
           </Link>
-          <ProTip />
         </Box>
         <Box>
           <h1>ggg</h1>

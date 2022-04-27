@@ -1,0 +1,6 @@
+<ActiveLink children="home active link" href="/" />
+<ActiveLink children="about active link" href="/about" />
+
+<MuiLink color="inherit" href="https://mui.com/">
+mui.com MuiLink
+</MuiLink>{" "}
