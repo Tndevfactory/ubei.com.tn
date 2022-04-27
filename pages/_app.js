@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
-import { TndevProvider } from "../src/contexts/TndevContext";
+import { TndevProvider } from "../contexts/TndevContext";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import theme from "../src/theme";
+import theme from "../theme";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
-import arabic from "../src/locales/Ar";
-import english from "../src/locales/En";
-import french from "../src/locales/Fr";
+import arabic from "../locales/Ar";
+import english from "../locales/En";
+import french from "../locales/Fr";
 import Script from "next/script";
 import "../styles/globals.css";
 

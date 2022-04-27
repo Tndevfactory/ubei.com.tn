@@ -2,13 +2,13 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ProTip from "../src/ProTip";
-import ActiveLink from "../src/components/ActiveLink";
+import ProTip from "../components/ProTip";
+import ActiveLink from "../components/ActiveLink";
 import MuiLink from "@mui/material/Link";
-import Link from "../src/Link";
+import Link from "../components/Link";
 import Head from "next/head";
-import Navbar from "../src/components/Navbar";
-import Footer from "../src/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 
 export default function Index() {

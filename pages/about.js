@@ -3,13 +3,13 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import ProTip from "../src/ProTip";
-import Link from "../src/Link";
+import ProTip from "../components/ProTip";
+import Link from "../components/Link";
 
 import CssBaseline from "@mui/material/CssBaseline";
 
 import ButtonGroup from "@mui/material/ButtonGroup";
-import ActiveLink from "../src/components/ActiveLink";
+import ActiveLink from "../components/ActiveLink";
 
 export default function About() {
   return (
