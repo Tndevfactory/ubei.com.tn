@@ -9,8 +9,10 @@ import Link from "../src/Link";
 import Head from "next/head";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
+import { useRouter } from "next/router";
 
 export default function Index() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -78,9 +80,22 @@ export default function Index() {
             Next.js example
           </Typography>
           <Link href="/about" color="secondary">
-            Go to the about page
+            Go to the about page==
           </Link>
           <ProTip />
+        </Box>
+        <Box>
+          <h1>ggg</h1>
+          <ul>
+            {router.locales.map((locale) => {
+              <li key={locale}>
+                <Link href={router.asPath} locale={locale}>
+                  <a>{locale}</a>
+                  hhhh
+                </Link>
+              </li>;
+            })}
+          </ul>
         </Box>
       </Container>
       <Footer />
