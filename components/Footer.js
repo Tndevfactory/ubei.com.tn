@@ -6,6 +6,9 @@ import Typography from "@mui/material/Typography";
 import MuiLink from "@mui/material/Link";
 import { Container } from "@mui/material";
 
+import dynamic from "next/dynamic";
+
+const Facebook = dynamic(() => import("./Facebook"));
 export default function Navbar() {
   return (
     <Box
@@ -18,7 +21,8 @@ export default function Navbar() {
       }}
     >
       <Container maxWidth="xl">
-        <Typography variant="body2" color="text.secondary" align="center">
+        {/* <Facebook /> */}
+        <Typography variant="body2" color="secondary" align="center">
           {"Copyright © "}
           <MuiLink color="inherit" href="https://tndev-art.com">
             Tndev-art.com
