@@ -20,6 +20,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import BackToTop from "../components/BackToTop";
 
+import SwiperClient from "../components/SwiperClient";
+
 export default function Index() {
   const router = useRouter();
   const { formatMessage: f } = useIntl();
@@ -81,11 +83,11 @@ export default function Index() {
         <Box>
           <Carousel1 />
         </Box>
-        <Box sx={{ my: 4 }}>
-          <FormattedMessage id="name" />
-        </Box>
+
         <Box>
-          <Typography variant="h2">notre savoir faire</Typography>
+          <Typography sx={{ mt: 1 }} variant="h3">
+            notre savoir faire
+          </Typography>
         </Box>
 
         <Grid container spacing={2}>
@@ -184,7 +186,9 @@ export default function Index() {
         </Grid>
 
         <Box>
-          <Typography variant="h2">Nos produits</Typography>
+          <Typography sx={{ mt: 3 }} variant="h3">
+            nos produits
+          </Typography>
         </Box>
 
         <Grid container spacing={2}>
@@ -283,8 +287,11 @@ export default function Index() {
         </Grid>
 
         <Box>
-          <Typography variant="h2">nos clients</Typography>
+          <Typography sx={{ mt: 3 }} variant="h3">
+            nos clients
+          </Typography>
         </Box>
+        <SwiperClient />
       </Container>
       <Footer />
     </>
