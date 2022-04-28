@@ -77,20 +77,12 @@ export default function Index() {
       </Head>
       <Navbar />
       <Container maxWidth="xl" sx={{ marginTop: "4rem" }}>
-        <div id="back-to-top-anchor"></div>
         <BackToTop />
         <Box>
           <Carousel1 />
         </Box>
         <Box sx={{ my: 4 }}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            tndev-art under construction
-          </Typography>
-          <Link href="/about" color="secondary">
-            about
-          </Link>
           <FormattedMessage id="name" />
-          <br />
         </Box>
         <Box>
           <Typography variant="h2">notre savoir faire</Typography>
@@ -289,6 +281,10 @@ export default function Index() {
             </Card>
           </Grid>
         </Grid>
+
+        <Box>
+          <Typography variant="h2">nos clients</Typography>
+        </Box>
       </Container>
       <Footer />
     </>

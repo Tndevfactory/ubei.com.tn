@@ -53,7 +53,7 @@ export default function BackToTop(props) {
     <React.Fragment>
       <CssBaseline />
       <ScrollTop {...props}>
-        <Fab color="secondary" size="small" aria-label="scroll back to top">
+        <Fab color="primary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>

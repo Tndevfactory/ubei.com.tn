@@ -406,6 +406,7 @@ export default function Navbar() {
           <Button onClick={handleCloseDialog}>Envoyer</Button>
         </DialogActions>
       </Dialog>
+      <div id="back-to-top-anchor"></div>
     </>
   );
 }
