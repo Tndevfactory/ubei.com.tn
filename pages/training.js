@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import ProTip from "../components/ProTip";
 import Link from "../components/Link";
-
+import { FormattedMessage, useIntl } from "react-intl";
 import CssBaseline from "@mui/material/CssBaseline";
 import Head from "next/head";
 import ButtonGroup from "@mui/material/ButtonGroup";

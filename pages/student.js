@@ -13,6 +13,7 @@ import ActiveLink from "../components/ActiveLink";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function Student() {
   return (

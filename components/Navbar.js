@@ -199,7 +199,7 @@ export default function Navbar() {
                   component="h5"
                   sx={{ display: "block", pt: 0.4 }}
                 >
-                  TndevArt
+                  <FormattedMessage id="TndevArt" />
                 </Typography>
               </Stack>
             </Grid>
@@ -218,30 +218,49 @@ export default function Navbar() {
                 sx={{ display: { xs: "none", md: "flex" } }}
               >
                 <Link href="/" className="active">
-                  <Typography color="white">Accueil</Typography>
+                  <Typography
+                    color="white"
+                    sx={{ ml: router.locale === "ar" ? "9px" : "0px" }}
+                  >
+                    <FormattedMessage id="home" />
+                  </Typography>
                 </Link>
 
                 <Link href="/design" className="active">
-                  <Typography color="white">Design</Typography>
+                  <Typography color="white">
+                    <FormattedMessage id="design" />
+                  </Typography>
                 </Link>
                 <Link href="/web" className="active">
-                  <Typography color="white">Web</Typography>
+                  <Typography color="white">
+                    <FormattedMessage id="web" />
+                  </Typography>
                 </Link>
                 <Link href="/mobile" className="active">
-                  <Typography color="white">Mobile</Typography>
+                  <Typography color="white">
+                    <FormattedMessage id="mobile" />
+                  </Typography>
                 </Link>
                 <Link href="/software" className="active">
-                  <Typography color="white">Software</Typography>
+                  <Typography color="white">
+                    <FormattedMessage id="software" />
+                  </Typography>
                 </Link>
 
                 <Link href="/training" className="active">
-                  <Typography color="white">Formation</Typography>
+                  <Typography color="white">
+                    <FormattedMessage id="training" />
+                  </Typography>
                 </Link>
                 <Link href="/student" className="active">
-                  <Typography color="white">Etudiant</Typography>
+                  <Typography color="white">
+                    <FormattedMessage id="student" />
+                  </Typography>
                 </Link>
                 <Link href="/blog" className="active">
-                  <Typography color="white">Blog</Typography>
+                  <Typography color="white">
+                    <FormattedMessage id="blog" />
+                  </Typography>
                 </Link>
 
                 <Typography
@@ -256,7 +275,7 @@ export default function Navbar() {
                   onClick={handleClickOpenDialog}
                   color="white"
                 >
-                  Contact-nous
+                  <FormattedMessage id="contact-us" />
                 </Typography>
               </Stack>
             </Grid>
@@ -316,13 +335,13 @@ export default function Navbar() {
                 color="inherit"
                 sx={{ display: { xs: "none", md: "flex" } }}
               >
-                Login
+                <FormattedMessage id="signin" />
               </Button>
               <Button
                 color="inherit"
                 sx={{ display: { xs: "none", md: "flex" } }}
               >
-                Subscribe
+                <FormattedMessage id="signup" />
               </Button>
 
               <Tooltip title="Login">

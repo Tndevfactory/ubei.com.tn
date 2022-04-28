@@ -7,7 +7,7 @@ import ProTip from "../components/ProTip";
 import Link from "../components/Link";
 import Head from "next/head";
 import CssBaseline from "@mui/material/CssBaseline";
-
+import { FormattedMessage, useIntl } from "react-intl";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import ActiveLink from "../components/ActiveLink";
 import Navbar from "../components/Navbar";

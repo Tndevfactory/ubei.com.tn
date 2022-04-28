@@ -2,7 +2,7 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { FormattedMessage, useIntl } from "react-intl";
+
 import Link from "../components/Link";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import Carousel1 from "../components/Carousel1";
 import { styled } from "@mui/material/styles";
-
+import { FormattedMessage, useIntl } from "react-intl";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
