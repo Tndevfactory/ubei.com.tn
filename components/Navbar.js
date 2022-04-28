@@ -91,7 +91,10 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/" className="active">
-            <ListItemText>Accueil</ListItemText>
+            <ListItemText>
+              {" "}
+              <FormattedMessage id="home" />
+            </ListItemText>
           </Link>
         </ListItem>
       </List>
@@ -102,7 +105,10 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/design" className="active">
-            <ListItemText>Design</ListItemText>
+            <ListItemText>
+              {" "}
+              <FormattedMessage id="design" />
+            </ListItemText>
           </Link>
         </ListItem>
         <ListItem>
@@ -110,7 +116,10 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/web" className="active">
-            <ListItemText>Web</ListItemText>
+            <ListItemText>
+              {" "}
+              <FormattedMessage id="web" />
+            </ListItemText>
           </Link>
         </ListItem>
         <ListItem>
@@ -118,7 +127,10 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/mobile" className="active">
-            <ListItemText>Mobile</ListItemText>
+            <ListItemText>
+              {" "}
+              <FormattedMessage id="mobile" />
+            </ListItemText>
           </Link>
         </ListItem>
         <ListItem>

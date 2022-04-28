@@ -291,6 +291,7 @@ export default function Index() {
             nos clients
           </Typography>
         </Box>
+
         <SwiperClient />
       </Container>
       <Footer />
