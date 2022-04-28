@@ -29,8 +29,28 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
+import TextField from "@mui/material/TextField";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+
+import Tooltip from "@mui/material/Tooltip";
 
 export default function Navbar() {
+  // dialog
+  const [openDialog, setOpenDialog] = React.useState(false);
+
+  const handleClickOpenDialog = () => {
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  // drawer
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -82,7 +102,7 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/about" className="active">
-            <ListItemText>Accueil</ListItemText>
+            <ListItemText>Design</ListItemText>
           </Link>
         </ListItem>
         <ListItem>
@@ -90,7 +110,7 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/about" className="active">
-            <ListItemText>Accueil</ListItemText>
+            <ListItemText>Web</ListItemText>
           </Link>
         </ListItem>
         <ListItem>
@@ -98,7 +118,7 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/about" className="active">
-            <ListItemText>Accueil</ListItemText>
+            <ListItemText>Mobile</ListItemText>
           </Link>
         </ListItem>
         <ListItem>
@@ -106,7 +126,7 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/about" className="active">
-            <ListItemText>Accueil</ListItemText>
+            <ListItemText>Software</ListItemText>
           </Link>
         </ListItem>
         <ListItem>
@@ -114,7 +134,15 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/about" className="active">
-            <ListItemText>Accueil</ListItemText>
+            <ListItemText>Blog</ListItemText>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon>
+          <Link href="/about" className="active">
+            <ListItemText>Contactez-nous</ListItemText>
           </Link>
         </ListItem>
       </List>
@@ -185,18 +213,39 @@ export default function Navbar() {
                   <Typography color="white">Design</Typography>
                 </Link>
                 <Link href="/about" className="active">
-                  <Typography color="white">Web-app</Typography>
+                  <Typography color="white">Web</Typography>
+                </Link>
+                <Link href="/about" className="active">
+                  <Typography color="white">Mobile</Typography>
+                </Link>
+                <Link href="/about" className="active">
+                  <Typography color="white">Software</Typography>
                 </Link>
 
                 <Link href="/about" className="active">
-                  <Typography color="white">Etudiants</Typography>
+                  <Typography color="white">Formation</Typography>
+                </Link>
+                <Link href="/about" className="active">
+                  <Typography color="white">Etudiant</Typography>
                 </Link>
                 <Link href="/about" className="active">
                   <Typography color="white">Blog</Typography>
                 </Link>
-                <Link href="/about" className="active">
-                  <Typography color="white">Contact-nous</Typography>
-                </Link>
+
+                <Typography
+                  sx={{
+                    background: "orange",
+                    padding: "2px",
+                    borderRadius: "6px",
+                    textDecoration: "none",
+                    boxShadow: "none",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleClickOpenDialog}
+                  color="white"
+                >
+                  Contact-nous
+                </Typography>
               </Stack>
             </Grid>
             <Grid
@@ -264,12 +313,16 @@ export default function Navbar() {
                 Subscribe
               </Button>
 
-              <AccountCircleIcon
-                sx={{ mx: 3, display: { xs: "flex", md: "none" } }}
-              />
-              <AppRegistrationIcon
-                sx={{ display: { xs: "flex", md: "none" } }}
-              />
+              <Tooltip title="Login">
+                <IconButton sx={{ display: { xs: "flex", md: "none" } }}>
+                  <AccountCircleIcon sx={{ mx: 2, color: "white" }} />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="register">
+                <IconButton sx={{ display: { xs: "flex", md: "none" } }}>
+                  <AppRegistrationIcon sx={{ color: "white" }} />
+                </IconButton>
+              </Tooltip>
             </Grid>
           </Grid>
         </Toolbar>
@@ -290,6 +343,57 @@ export default function Navbar() {
           </React.Fragment>
         ))}
       </div>
+
+      <Dialog open={openDialog} onClose={handleCloseDialog}>
+        <DialogTitle>Demande</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Nous vous remercions de votre confiance
+          </DialogContentText>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Email"
+            type="email"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="telephone"
+            label="Telephone"
+            type="text"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="sujet"
+            label="Sujet"
+            type="text"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            multiline
+            rows={4}
+            margin="dense"
+            id="demande"
+            label="Demande"
+            type="text"
+            fullWidth
+            variant="standard"
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDialog}>Retour</Button>
+          <Button onClick={handleCloseDialog}>Envoyer</Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 }

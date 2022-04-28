@@ -14,9 +14,6 @@ const Anchor = styled("a")({
   "&.active": {
     color: "#333",
   },
-  "&.hover": {
-    color: "orange",
-  },
 });
 
 export const NextLinkComposed = React.forwardRef(function NextLinkComposed(
