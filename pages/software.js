@@ -10,20 +10,23 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import ButtonGroup from "@mui/material/ButtonGroup";
 import ActiveLink from "../components/ActiveLink";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Software() {
   return (
-    <Container maxWidth="sm">
-      <CssBaseline />
+    <>
+      <Navbar />
+      <Container maxWidth="sm" sx={{ marginTop: "4rem" }}>
+        <CssBaseline />
 
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Software page
-        </Typography>
-        <Button variant="contained" component={Link} noLinkStyle href="/">
-          Home
-        </Button>
-      </Box>
-    </Container>
+        <Box sx={{ my: 4 }}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Software page
+          </Typography>
+        </Box>
+      </Container>
+      <Footer />
+    </>
   );
 }
