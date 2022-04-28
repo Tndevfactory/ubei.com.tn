@@ -22,6 +22,7 @@ import Button from "@mui/material/Button";
 export default function Index() {
   const router = useRouter();
   const { formatMessage: f } = useIntl();
+  console.log(process.env.NEXT_PUBLIC_API_URL);
 
   return (
     <>
