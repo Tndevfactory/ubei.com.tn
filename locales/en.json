@@ -1,0 +1,6 @@
+{
+  "name": "name",
+  "currency": "currency",
+
+  "greeting.name": "hello {varname}"
+}

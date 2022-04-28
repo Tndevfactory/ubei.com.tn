@@ -1,0 +1,6 @@
+{
+  "name": "nom",
+  "currency": "monnaie",
+
+  "greeting.name": "bonjour {varname}"
+}

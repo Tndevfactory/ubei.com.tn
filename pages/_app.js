@@ -8,9 +8,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../theme";
 import { IntlProvider } from "react-intl";
 import { useRouter } from "next/router";
-import arabic from "../locales/Ar";
-import english from "../locales/En";
-import french from "../locales/Fr";
+import arabic from "../locales/ar.json";
+import english from "../locales/en.json";
+import french from "../locales/fr.json";
 import Script from "next/script";
 import "../styles/globals.css";
 

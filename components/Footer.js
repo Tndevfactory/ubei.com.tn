@@ -8,12 +8,20 @@ import { Container } from "@mui/material";
 
 export default function Navbar() {
   return (
-    <Box sx={{ flexGrow: 1, backgroundColor: "#066" }}>
+    <Box
+      sx={{
+        mt: 5,
+        flexGrow: 1,
+        backgroundColor: "#222",
+        color: "white",
+        height: 200,
+      }}
+    >
       <Container maxWidth="xl">
         <Typography variant="body2" color="text.secondary" align="center">
           {"Copyright © "}
-          <MuiLink color="inherit" href="https://mui.com/">
-            Your Website
+          <MuiLink color="inherit" href="https://tndev-art.com">
+            Tndev-art.com
           </MuiLink>{" "}
           {new Date().getFullYear()}.
         </Typography>

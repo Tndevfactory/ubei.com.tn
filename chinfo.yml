@@ -1,6 +1,59 @@
+import ProTip from "../components/ProTip";
+import ActiveLink from "../components/ActiveLink";
+import MuiLink from "@mui/material/Link";
+
 <ActiveLink children="home active link" href="/" />
 <ActiveLink children="about active link" href="/about" />
 
 <MuiLink color="inherit" href="https://mui.com/">
 mui.com MuiLink
 </MuiLink>{" "}
+
+
+------- intl 
+ <h1>ggg</h1>
+
+          <FormattedMessage id="name" defaultMessage="ch name" />
+          <br />
+          <FormattedDate
+            value={new Date(1459832991883)}
+            year="numeric"
+            month="long"
+            day="2-digit"
+          />
+          <br />
+          <FormattedTime value={new Date(1459832991883)} />
+
+          <ul>
+            {router.locales.map((locale) => (
+              <li key={locale}>
+                <Link href={router.asPath} locale={locale}>
+                  {locale}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <h1>ggg</h1>
+          with variable
+
+          <FormattedMessage
+            id="greeting.name"
+            defaultMessage="Hello, {varname}!"
+            values={{
+              varname: "chawki",
+            }}
+          />
+
+          ou bien 
+
+          const { formatMessage: f } = useIntl();
+          <h1>{f({ id: "greeting.name" , values:{ varname: "chawki",})}</h1>
+  <Image
+        src={item.img}
+        height={500}
+        width={1800}
+        alt={item.name}
+        layout="responsive"
+        style={{ position: "absolute", top: 0, left: 0, height: "100%" }}
+      />
