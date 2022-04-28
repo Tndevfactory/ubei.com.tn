@@ -8,7 +8,7 @@ export const TndevContext = createContext(null);
 export const TndevCtx = () => {
   return useContext(TndevContext);
 };
-
+console.log(process.env.NEXT_PUBLIC_API_URL);
 const BASE_URL_SERVER = "http://localhost:8000/api";
 const api = axios.create({
   // baseURL: process.env.BASE_URL,
