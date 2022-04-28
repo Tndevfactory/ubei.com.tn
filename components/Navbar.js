@@ -90,7 +90,7 @@ export default function Navbar() {
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <Link href="/about" className="active">
+          <Link href="/" className="active">
             <ListItemText>Accueil</ListItemText>
           </Link>
         </ListItem>
@@ -101,7 +101,7 @@ export default function Navbar() {
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <Link href="/about" className="active">
+          <Link href="/design" className="active">
             <ListItemText>Design</ListItemText>
           </Link>
         </ListItem>
@@ -109,7 +109,7 @@ export default function Navbar() {
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <Link href="/about" className="active">
+          <Link href="/web" className="active">
             <ListItemText>Web</ListItemText>
           </Link>
         </ListItem>
@@ -117,7 +117,7 @@ export default function Navbar() {
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <Link href="/about" className="active">
+          <Link href="/mobile" className="active">
             <ListItemText>Mobile</ListItemText>
           </Link>
         </ListItem>
@@ -125,7 +125,7 @@ export default function Navbar() {
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <Link href="/about" className="active">
+          <Link href="/software" className="active">
             <ListItemText>Software</ListItemText>
           </Link>
         </ListItem>
@@ -133,7 +133,7 @@ export default function Navbar() {
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <Link href="/about" className="active">
+          <Link href="/blog" className="active">
             <ListItemText>Blog</ListItemText>
           </Link>
         </ListItem>
@@ -141,9 +141,21 @@ export default function Navbar() {
           <ListItemIcon>
             <InboxIcon />
           </ListItemIcon>
-          <Link href="/about" className="active">
-            <ListItemText>Contactez-nous</ListItemText>
-          </Link>
+
+          <Typography
+            sx={{
+              background: "orange",
+              padding: "2px",
+              borderRadius: "6px",
+              textDecoration: "none",
+              boxShadow: "none",
+              cursor: "pointer",
+            }}
+            onClick={handleClickOpenDialog}
+            color="white"
+          >
+            Contact-nous
+          </Typography>
         </ListItem>
       </List>
     </Box>
@@ -205,30 +217,30 @@ export default function Navbar() {
                 spacing={2}
                 sx={{ display: { xs: "none", md: "flex" } }}
               >
-                <Link href="/about" className="active">
+                <Link href="/" className="active">
                   <Typography color="white">Accueil</Typography>
                 </Link>
 
-                <Link href="/about" className="active">
+                <Link href="/design" className="active">
                   <Typography color="white">Design</Typography>
                 </Link>
-                <Link href="/about" className="active">
+                <Link href="/web" className="active">
                   <Typography color="white">Web</Typography>
                 </Link>
-                <Link href="/about" className="active">
+                <Link href="/mobile" className="active">
                   <Typography color="white">Mobile</Typography>
                 </Link>
-                <Link href="/about" className="active">
+                <Link href="/software" className="active">
                   <Typography color="white">Software</Typography>
                 </Link>
 
-                <Link href="/about" className="active">
+                <Link href="/training" className="active">
                   <Typography color="white">Formation</Typography>
                 </Link>
-                <Link href="/about" className="active">
+                <Link href="/student" className="active">
                   <Typography color="white">Etudiant</Typography>
                 </Link>
-                <Link href="/about" className="active">
+                <Link href="/blog" className="active">
                   <Typography color="white">Blog</Typography>
                 </Link>
 

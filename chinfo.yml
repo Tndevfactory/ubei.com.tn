@@ -57,3 +57,24 @@ mui.com MuiLink
         layout="responsive"
         style={{ position: "absolute", top: 0, left: 0, height: "100%" }}
       />
+
+
+      // share button 
+       <FacebookShareButton
+          url={"https://www.tndev-art.tn/"}
+          quote={"share java app"}
+          hashtag={"#nextshare"}
+        >
+          <FacebookIcon size={32} round />
+        </FacebookShareButton>
+
+        <PinterestShareButton
+          url={"www.tndev-art.tn"}
+          media={
+            "next-share is a social share buttons for your next React apps."
+          }
+        >
+          <PinterestIcon size={32} round />
+        </PinterestShareButton>
+
+        

@@ -4,11 +4,14 @@ import Box from "@mui/material/Box";
 
 import Typography from "@mui/material/Typography";
 import MuiLink from "@mui/material/Link";
-import { Container } from "@mui/material";
+import { Avatar, Container } from "@mui/material";
 import { FacebookShareButton, FacebookIcon } from "next-share";
 import { PinterestShareButton, PinterestIcon } from "next-share";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Stack from "@mui/material/Stack";
 import dynamic from "next/dynamic";
-
+import { Grid } from "@material-ui/core";
 const Facebook = dynamic(() => import("./Facebook"));
 export default function Navbar() {
   return (
@@ -18,30 +21,50 @@ export default function Navbar() {
         flexGrow: 1,
         backgroundColor: "#222",
         color: "white",
-        height: 200,
       }}
     >
       <Container maxWidth="xl">
-        {/* <Facebook /> */}
-        <FacebookShareButton
-          url={"https://www.tndev-art.tn/"}
-          quote={"share java app"}
-          hashtag={"#nextshare"}
-        >
-          <FacebookIcon size={32} round />
-        </FacebookShareButton>
+        <Grid container>
+          <Grid
+            item
+            xs={2}
+            sx={{
+              display: "flex",
+              justifyContent: "start",
+              alignItems: "center",
+            }}
+          >
+            <Avatar
+              alt="Remy Sharp"
+              src="/static/images/logo/logo.png"
+              sx={{ width: 38, height: 38, display: "flex", mt: 3 }}
+            />
 
-        <PinterestShareButton
-          url={"www.tndev-art.tn"}
-          media={
-            "next-share is a social share buttons for your next React apps."
-          }
+            <Typography
+              variant="h6"
+              component="h6"
+              sx={{
+                display: "inline-block",
+                marginTop: "23px",
+                marginLeft: "14px",
+                fontSize: "1.3rem",
+              }}
+            >
+              TndevArt
+            </Typography>
+          </Grid>
+        </Grid>
+        <Typography
+          variant="body2"
+          sx={{ color: "lightseagreen" }}
+          align="center"
         >
-          <PinterestIcon size={32} round />
-        </PinterestShareButton>
-        <Typography variant="body2" color="secondary" align="center">
           {"Copyright © "}
-          <MuiLink color="inherit" href="https://tndev-art.com">
+          <MuiLink
+            sx={{ textDecoration: "none" }}
+            color="inherit"
+            href="https://tndev-art.com"
+          >
             Tndev-art.com
           </MuiLink>{" "}
           {new Date().getFullYear()}.

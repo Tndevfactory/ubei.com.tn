@@ -11,25 +11,17 @@ import CssBaseline from "@mui/material/CssBaseline";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import ActiveLink from "../components/ActiveLink";
 
-export default function About() {
+export default function Student() {
   return (
     <Container maxWidth="sm">
       <CssBaseline />
-      {/* <ActiveLink children="home" href="/" /> */}
-      <ButtonGroup
-        variant="contained"
-        aria-label="outlined primary button group"
-      >
-        <Button color="secondary">Secondary</Button>
-        <Button>Two</Button>
-        <Button>Three</Button>
-      </ButtonGroup>
+
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Next.js example
+          Students page
         </Typography>
         <Button variant="contained" component={Link} noLinkStyle href="/">
-          Go to the main page
+          Home
         </Button>
       </Box>
     </Container>

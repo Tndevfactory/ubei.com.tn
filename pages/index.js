@@ -97,7 +97,7 @@ export default function Index() {
         </Box>
 
         <Grid container spacing={2}>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
@@ -120,7 +120,7 @@ export default function Index() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
@@ -143,7 +143,7 @@ export default function Index() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
@@ -166,7 +166,7 @@ export default function Index() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
@@ -196,7 +196,7 @@ export default function Index() {
         </Box>
 
         <Grid container spacing={2}>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
@@ -219,7 +219,7 @@ export default function Index() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
@@ -242,7 +242,7 @@ export default function Index() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
@@ -265,7 +265,7 @@ export default function Index() {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia
                 component="img"
