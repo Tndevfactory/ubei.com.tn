@@ -172,7 +172,7 @@ export default function Navbar() {
             onClick={handleClickOpenDialog}
             color="white"
           >
-            Contact-nous
+            <FormattedMessage id="contact-us" />
           </Typography>
         </ListItem>
       </List>
@@ -278,10 +278,10 @@ export default function Navbar() {
                 <Typography
                   sx={{
                     background: "orange",
-                    px: 3,
-                    py: 0.5,
+                    px: 2,
+                    py: 0.1,
                     mb: 2,
-                    color: "#000",
+                    color: "#fff",
                     borderRadius: "6px",
                     textDecoration: "none",
 
