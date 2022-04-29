@@ -85,14 +85,17 @@ export default function Index() {
         </Box>
 
         <Box>
-          <Typography sx={{ mt: 1 }} variant="h3">
-            notre savoir faire
+          <Typography sx={{ mt: 1 }} variant="h4">
+            notre savoir faire :
+          </Typography>
+          <Typography sx={{ mt: 1 }} variant="h6">
+            Identifiants pour demo, Email : demo@demo.tn password: demo@demo.tn
           </Typography>
         </Box>
 
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
               <CardMedia
                 component="img"
                 height="140"
@@ -101,21 +104,22 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Web- app
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  Realisation des applications web pour des entreprises ou
+                  particuliers comme des sites E-commerces, gestion de paie ou
+                  des simple traceurs d'incidents ou connexion d'employees
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Partager</Button>
+                <Button size="small">Voir demo</Button>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
               <CardMedia
                 component="img"
                 height="140"
@@ -124,21 +128,20 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Mobile
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  Des solutions en React natif comme en flutter
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Partager</Button>
+                <Button size="small">Voir demo</Button>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
               <CardMedia
                 component="img"
                 height="140"
@@ -147,21 +150,20 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Softwares
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  Des solutions en Electron.js ou python sont disponibles
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Partager</Button>
+                <Button size="small">Voir demo</Button>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
               <CardMedia
                 component="img"
                 height="140"
@@ -170,16 +172,16 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Etudiants
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  Des formations en backend comme en frontend et accompagnement
+                  PFE disponibles
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Partager</Button>
+                <Button size="small">Voir demo</Button>
               </CardActions>
             </Card>
           </Grid>
