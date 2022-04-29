@@ -76,7 +76,7 @@ const SwiperClient = () => {
             alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h6" component="div">
               Entreprise Hitcom
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -94,7 +94,7 @@ const SwiperClient = () => {
             alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h6" component="div">
               Etudiante Bjaoui Z [technopole Ensi Manouba]
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -112,7 +112,7 @@ const SwiperClient = () => {
             alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h6" component="div">
               Etudiante Ben Khelif O [Campus FST Manar]
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -130,7 +130,7 @@ const SwiperClient = () => {
             alt="green iguana"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h6" component="div">
               Entreprise SmartSkills
             </Typography>
             <Typography variant="body2" color="text.secondary">

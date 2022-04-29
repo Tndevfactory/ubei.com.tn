@@ -13,13 +13,28 @@ function Item({ item }) {
         color: "white",
         position: "relative",
         backgroundImage: `url(${item.img})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "darken",
         height: 400,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "end",
+        alignItems: "center",
       }}
     >
       <h2>{item.name}</h2>
       <p>{item.description}</p>
 
-      <Button className="CheckButton">Check it out!</Button>
+      <Button
+        sx={{ mb: 4 }}
+        color="error"
+        className="CheckButton mb-3"
+        variant="contained"
+      >
+        voir plus
+      </Button>
     </div>
   );
 }
@@ -27,18 +42,19 @@ function Item({ item }) {
 export default function Carousel1() {
   var items = [
     {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
+      name: "Rapidite et efficacite",
+      description: "Notre but ultime est de vous satisfaire",
       img: "/static/images/cards/2.jpg",
     },
     {
-      name: "Random Name #2",
-      description: "Hello World!",
+      name: "Maintenance gratuite",
+      description:
+        "Vous disposez deja d'une offre de maintenance gratuite pour 3 ans",
       img: "/static/images/cards/1.jpg",
     },
     {
-      name: "Random Name #3",
-      description: "Hello World!",
+      name: "Remise extraordinaire",
+      description: "Des prix tres abordable face a la concurrence ...",
       img: "/static/images/cards/3.jpg",
     },
   ];
@@ -50,12 +66,12 @@ export default function Carousel1() {
       swipe
       NextIcon={<AccountTreeIcon />}
       PrevIcon={<AccountTreeIcon />}
-      next={(next, active) =>
-        console.log(`we left ${active}, and are now at ${next}`)
-      }
-      prev={(prev, active) =>
-        console.log(`we left ${active}, and are now at ${prev}`)
-      }
+      // next={(next, active) =>
+      //   console.log(`we left ${active}, and are now at ${next}`)
+      // }
+      // prev={(prev, active) =>
+      //   console.log(`we left ${active}, and are now at ${prev}`)
+      // }
     >
       {items.map((item, i) => (
         <Item key={i} item={item} />

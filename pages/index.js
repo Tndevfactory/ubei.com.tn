@@ -78,7 +78,7 @@ export default function Index() {
         />
       </Head>
       <Navbar />
-      <Container maxWidth="xl" sx={{ marginTop: "4rem" }}>
+      <Container maxWidth="xl" sx={{ marginTop: "6rem" }}>
         <BackToTop />
         <Box>
           <Carousel1 />
@@ -88,8 +88,8 @@ export default function Index() {
           <Typography sx={{ mt: 1 }} variant="h4">
             notre savoir faire :
           </Typography>
-          <Typography sx={{ mt: 1 }} variant="h6">
-            Demo [Email: demo@demo.tn] [password: demo@demo.tn]
+          <Typography sx={{ mt: 1 }} variant="body">
+            [Email: demo@demo.tn] [password: demo@demo.tn]
           </Typography>
         </Box>
 
@@ -103,7 +103,7 @@ export default function Index() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Web-application
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -127,7 +127,7 @@ export default function Index() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Mobile
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -149,7 +149,7 @@ export default function Index() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Softwares
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -171,7 +171,7 @@ export default function Index() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Etudiants
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -203,7 +203,7 @@ export default function Index() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Spring-boot
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -226,7 +226,7 @@ export default function Index() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Python Flask
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -249,7 +249,7 @@ export default function Index() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   .net
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -271,7 +271,7 @@ export default function Index() {
                 alt="green iguana"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h6" component="div">
                   Ruby
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
