@@ -28,7 +28,8 @@ export default function Navbar() {
         <Grid container sx={{ py: 5 }}>
           <Grid
             item
-            xs={2}
+            xs={12}
+            md={2}
             sx={{
               display: "flex",
               justifyContent: "start",
@@ -57,7 +58,8 @@ export default function Navbar() {
 
           <Grid
             item
-            xs={3}
+            xs={12}
+            md={3}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -71,7 +73,8 @@ export default function Navbar() {
           </Grid>
           <Grid
             item
-            xs={4}
+            xs={12}
+            md={4}
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -87,7 +90,8 @@ export default function Navbar() {
           </Grid>
           <Grid
             item
-            xs={3}
+            xs={12}
+            md={3}
             sx={{
               display: "flex",
               flexDirection: "column",

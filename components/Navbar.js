@@ -138,7 +138,10 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/software" className="active">
-            <ListItemText>Software</ListItemText>
+            <ListItemText>
+              {" "}
+              <FormattedMessage id="software" />
+            </ListItemText>
           </Link>
         </ListItem>
         <ListItem>
@@ -146,7 +149,10 @@ export default function Navbar() {
             <InboxIcon />
           </ListItemIcon>
           <Link href="/blog" className="active">
-            <ListItemText>Blog</ListItemText>
+            <ListItemText>
+              {" "}
+              <FormattedMessage id="blog" />
+            </ListItemText>
           </Link>
         </ListItem>
         <ListItem>
@@ -187,33 +193,27 @@ export default function Navbar() {
                 alignItems: "center",
               }}
             >
-              <Stack direction="row" spacing={1}>
-                <IconButton
-                  sx={{ display: { xs: "block", md: "none" } }}
-                  edge="start"
-                  color="inherit"
-                  aria-label="menu"
-                  onClick={toggleDrawer(
-                    router.locale == "ar" ? "right" : "left",
-                    true
-                  )}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="/static/images/logo/logo.png"
-                  sx={{ width: 35, height: 35, display: "block", mt: 3 }}
-                />
+              <IconButton
+                sx={{ display: { xs: "block", md: "none" } }}
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer(
+                  router.locale == "ar" ? "right" : "left",
+                  true
+                )}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Avatar
+                alt="Remy Sharp"
+                src="/static/images/logo/logo.png"
+                sx={{ width: 35, height: 35, display: "block" }}
+              />
 
-                <Typography
-                  variant="h6"
-                  component="h5"
-                  sx={{ display: "block", pt: 0.4 }}
-                >
-                  <FormattedMessage id="TndevArt" />
-                </Typography>
-              </Stack>
+              <Typography variant="h6" component="h5" sx={{ display: "block" }}>
+                <FormattedMessage id="TndevArt" />
+              </Typography>
             </Grid>
             <Grid
               item
@@ -278,14 +278,17 @@ export default function Navbar() {
                 <Typography
                   sx={{
                     background: "orange",
-                    padding: "2px",
+                    px: 3,
+                    py: 0.5,
+                    mb: 2,
+                    color: "#000",
                     borderRadius: "6px",
                     textDecoration: "none",
+
                     boxShadow: "none",
                     cursor: "pointer",
                   }}
                   onClick={handleClickOpenDialog}
-                  color="white"
                 >
                   <FormattedMessage id="contact-us" />
                 </Typography>
@@ -302,7 +305,6 @@ export default function Navbar() {
               }}
             >
               <Button
-                sx={{ padding: "0px", marginRight: "-15px" }}
                 color="secondary"
                 id="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
@@ -358,9 +360,10 @@ export default function Navbar() {
 
               <Tooltip title="Login">
                 <IconButton sx={{ display: { xs: "flex", md: "none" } }}>
-                  <AccountCircleIcon sx={{ mx: 2, color: "white" }} />
+                  <AccountCircleIcon sx={{ color: "white" }} />
                 </IconButton>
               </Tooltip>
+
               <Tooltip title="register">
                 <IconButton sx={{ display: { xs: "flex", md: "none" } }}>
                   <AppRegistrationIcon sx={{ color: "white" }} />
