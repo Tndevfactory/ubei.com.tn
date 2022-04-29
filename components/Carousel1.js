@@ -24,8 +24,10 @@ function Item({ item }) {
         alignItems: "center",
       }}
     >
-      <h2>{item.name}</h2>
-      <p>{item.description}</p>
+      <h2 style={{ textShadow: "1px 1px 1px rgba(0,0,0,0.5)" }}>{item.name}</h2>
+      <p style={{ textShadow: "1px 1px 1px rgba(0,0,0,0.5)" }}>
+        {item.description}
+      </p>
 
       <Button
         sx={{ mb: 4 }}
@@ -44,18 +46,18 @@ export default function Carousel1() {
     {
       name: "Rapidite et efficacite",
       description: "Notre but ultime est de vous satisfaire",
-      img: "/static/images/cards/2.jpg",
+      img: "/static/images/cards/carousel1.png",
     },
     {
       name: "Maintenance gratuite",
       description:
         "Vous disposez deja d'une offre de maintenance gratuite pour 3 ans",
-      img: "/static/images/cards/1.jpg",
+      img: "/static/images/cards/carousel2.png",
     },
     {
       name: "Remise extraordinaire",
       description: "Des prix tres abordable face a la concurrence ...",
-      img: "/static/images/cards/3.jpg",
+      img: "/static/images/cards/carousel3.png",
     },
   ];
 

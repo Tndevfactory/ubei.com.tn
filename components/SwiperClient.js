@@ -48,9 +48,8 @@ const SwiperClient = () => {
         <Card>
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/2.jpg"
-            alt="green iguana"
+            image="/static/images/cards/entreprise.png"
+            alt="Entreprise psexpress"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
@@ -67,9 +66,8 @@ const SwiperClient = () => {
         <Card>
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/2.jpg"
-            alt="green iguana"
+            image="/static/images/cards/entreprise.png"
+            alt="Entreprise Hitcom"
           />
           <CardContent>
             <Typography gutterBottom variant="h6" component="div">
@@ -85,9 +83,8 @@ const SwiperClient = () => {
         <Card>
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/2.jpg"
-            alt="green iguana"
+            image="/static/images/cards/customer.png"
+            alt="Etudiante Bjaoui"
           />
           <CardContent>
             <Typography gutterBottom variant="h6" component="div">
@@ -103,9 +100,8 @@ const SwiperClient = () => {
         <Card>
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/2.jpg"
-            alt="green iguana"
+            image="/static/images/cards/customer.png"
+            alt=" Etudiante Ben Khelif"
           />
           <CardContent>
             <Typography gutterBottom variant="h6" component="div">
@@ -121,9 +117,8 @@ const SwiperClient = () => {
         <Card>
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/2.jpg"
-            alt="green iguana"
+            image="/static/images/cards/entreprise.png"
+            alt="Entreprise SmartSkills"
           />
           <CardContent>
             <Typography gutterBottom variant="h6" component="div">
