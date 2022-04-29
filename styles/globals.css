@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.swiper-button-prev {
+  color: rgb(4, 67, 63) !important;
+  font-size: 0.7rem !important;
+}
+
+.swiper-button-next {
+  color: rgb(4, 67, 63) !important;
+}
+.swiper-button-next::after {
+  content: "next" !important;
+}
+.swiper-button-prev::after {
+  content: "prev" !important;
+}
