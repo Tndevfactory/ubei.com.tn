@@ -35,20 +35,29 @@ export default function Index() {
           content="oWPG0Wtv_qIrPDPKZNXlIHgtAD7TnKYAE_ptUSEwP2o"
         />
         <meta charSet="UTF-8" />
-        <meta name="description" content="web artist for artisans" />
+        <meta
+          name="description"
+          content="agence web pour les particliers et les entreprises PME, nous offrons de la maintenance gratuite pour les travaux realises, اسوام في متناول الجميع"
+        />
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="keywords"
-          content="tunis, vente, marketplace, ecommerce, good price"
+          content="africa, linkedin, tunis, vente, marketplace, ecommerce, good price, prix website, combien website, combien site web, formation, تجارة , واب سيت, دبي, سعو دية, مشاريع"
         />
-        <meta name="author" content="CH" />
+        <meta name="author" content="tndev-art-tn" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="web artist for artisans" />
-        <meta property="og:description" content="market place." />
-        <meta property="og:image" content="https://i.ibb.co/xzk4HFF/back.png" />
-        <link rel="alternate" href="https://tndev-art.tn/ar" hrefLang="en" />
+        <meta property="og:title" content="Agence web a tunis nord afrique" />
+        <meta
+          property="og:description"
+          content="agence web digital, avec des prix tres competitifs, appeller nous au +216 55 38 54 74"
+        />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/y4sqsFR/tndev-art-tn-screenshot.png"
+        />
+        <link rel="alternate" href="https://tndev-art.tn/ar" hrefLang="ar" />
         <link rel="alternate" href="https://tndev-art.tn/fr" hrefLang="fr" />
-        <link rel="alternate" href="https://tndev-art.tn/en" hrefLang="ar" />
+        <link rel="alternate" href="https://tndev-art.tn/en" hrefLang="en" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -63,15 +72,12 @@ export default function Index() {
                 postalCode: "1001",
                 streetAddress: "Tunisia",
               },
-              colleague: [
-                "http://www.xyz.edu/students/alicejones.html",
-                "http://www.xyz.edu/students/bobsmith.html",
-              ],
-              email: "mailto:tndev8@gmail.com",
-              image: "janedoe.jpg",
+              colleague: ["http://tndev-art.com"],
+              email: "mailto:admin@tndev-art.com",
+              image: "https://i.ibb.co/y4sqsFR/tndev-art-tn-screenshot.png",
               jobTitle: "web developer",
               name: "CH",
-              telephone: "(216) 553-85474",
+              telephone: "+216 55 38 54 74",
               url: "https://tndev-art.tn",
             }),
           }}
@@ -85,7 +91,7 @@ export default function Index() {
         </Box>
 
         <Box>
-          <Typography sx={{ mt: 1 }} variant="h4">
+          <Typography sx={{ mt: 1 }} component="h1" variant="h4">
             notre savoir faire :
           </Typography>
           <Typography sx={{ mt: 1 }} variant="body">
@@ -102,7 +108,7 @@ export default function Index() {
                 alt="Web-application"
               />
               <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+                <Typography gutterBottom variant="h6" component="h2">
                   Web-application
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
