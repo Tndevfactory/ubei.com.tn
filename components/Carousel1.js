@@ -3,8 +3,6 @@ import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import Image from "next/image";
-import img1 from "../public/static/images/cards/1.jpg";
-import img2 from "../public/static/images/cards/2.jpg";
 
 function Item({ item }) {
   return (
@@ -46,18 +44,18 @@ export default function Carousel1() {
     {
       name: "Rapidite et efficacite",
       description: "Notre but ultime est de vous satisfaire",
-      img: "/static/images/cards/carousel1.png",
+      img: "/static/images/cards/carousel1.webp",
     },
     {
       name: "Maintenance gratuite",
       description:
         "Vous disposez deja d'une offre de maintenance gratuite pour 3 ans",
-      img: "/static/images/cards/carousel2.png",
+      img: "/static/images/cards/carousel2.webp",
     },
     {
       name: "Remise extraordinaire",
       description: "Des prix tres abordable face a la concurrence ...",
-      img: "/static/images/cards/carousel3.png",
+      img: "/static/images/cards/carousel3.webp",
     },
   ];
 
