@@ -61,10 +61,6 @@ const SwiperClient = () => {
               l'efficacite de l'equipe Tndev
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Partager</Button>
-            <Button size="small">Voir demo</Button>
-          </CardActions>
         </Card>
       </SwiperSlide>
       <SwiperSlide>

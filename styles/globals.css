@@ -24,9 +24,3 @@ a {
 .swiper-button-next {
   color: rgb(4, 67, 63) !important;
 }
-.swiper-button-next::after {
-  content: "next" !important;
-}
-.swiper-button-prev::after {
-  content: "prev" !important;
-}

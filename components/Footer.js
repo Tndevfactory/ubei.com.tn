@@ -39,13 +39,14 @@ export default function Navbar() {
             <Avatar
               alt="Remy Sharp"
               src="/static/images/logo/logo.png"
-              sx={{ width: 38, height: 38, display: "flex", mt: 0 }}
+              sx={{ mx: 0.5, width: 38, height: 38 }}
             />
 
             <Typography
               variant="h6"
               component="h6"
               sx={{
+                mb: 2,
                 display: "inline-block",
                 marginTop: "3px",
                 marginLeft: "14px",
@@ -61,6 +62,7 @@ export default function Navbar() {
             xs={12}
             md={3}
             sx={{
+              mb: 2,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -76,6 +78,7 @@ export default function Navbar() {
             xs={12}
             md={4}
             sx={{
+              mb: 2,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -93,6 +96,7 @@ export default function Navbar() {
             xs={12}
             md={3}
             sx={{
+              mb: 2,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",

@@ -208,7 +208,7 @@ export default function Navbar() {
               <Avatar
                 alt="Remy Sharp"
                 src="/static/images/logo/logo.png"
-                sx={{ width: 35, height: 35, display: "block" }}
+                sx={{ width: 35, height: 35, display: "block", mx: 1 }}
               />
 
               <Typography variant="h6" component="h5" sx={{ display: "block" }}>

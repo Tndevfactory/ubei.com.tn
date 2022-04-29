@@ -98,9 +98,8 @@ export default function Index() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
-                image="/static/images/cards/2.jpg"
-                alt="green iguana"
+                image="/static/images/cards/java.png"
+                alt="Web-application"
               />
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
@@ -122,9 +121,8 @@ export default function Index() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
-                image="/static/images/cards/2.jpg"
-                alt="green iguana"
+                image="/static/images/cards/mobile.png"
+                alt="Mobile"
               />
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
@@ -144,9 +142,8 @@ export default function Index() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
-                image="/static/images/cards/2.jpg"
-                alt="green iguana"
+                image="/static/images/cards/software.png"
+                alt="Softwares"
               />
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
@@ -166,9 +163,8 @@ export default function Index() {
             <Card>
               <CardMedia
                 component="img"
-                height="140"
-                image="/static/images/cards/2.jpg"
-                alt="green iguana"
+                image="/static/images/cards/student.png"
+                alt="students"
               />
               <CardContent>
                 <Typography gutterBottom variant="h6" component="div">
