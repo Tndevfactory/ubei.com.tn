@@ -89,7 +89,7 @@ export default function Index() {
             notre savoir faire :
           </Typography>
           <Typography sx={{ mt: 1 }} variant="h6">
-            ID demo [Email : demo@demo.tn] [password: demo@demo.tn]
+            Demo [Email: demo@demo.tn] [password: demo@demo.tn]
           </Typography>
         </Box>
 
@@ -104,7 +104,7 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Web- app
+                  Web-application
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Realisation des applications web pour des entreprises ou
@@ -188,14 +188,14 @@ export default function Index() {
         </Grid>
 
         <Box>
-          <Typography sx={{ mt: 3 }} variant="h3">
+          <Typography sx={{ mt: 3 }} variant="h4">
             nos produits
           </Typography>
         </Box>
 
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6} md={3}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
               <CardMedia
                 component="img"
                 height="140"
@@ -204,21 +204,21 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Spring-boot
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  La force et la securite de java, moderne microservice
+                  application
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Partager</Button>
+                <Button size="small">Voir demo</Button>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
               <CardMedia
                 component="img"
                 height="140"
@@ -227,21 +227,21 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Python Flask
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  L'efficacite de flask et son rapide integration avec les IOT
+                  telque rasberry pie ou STM
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Partager</Button>
+                <Button size="small">Voir demo</Button>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
               <CardMedia
                 component="img"
                 height="140"
@@ -250,21 +250,20 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  .net
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  La fonctionnalite de c# et son integration facile avec VR
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Partager</Button>
+                <Button size="small">Voir demo</Button>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card>
               <CardMedia
                 component="img"
                 height="140"
@@ -273,23 +272,22 @@ export default function Index() {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Ruby
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  Gestion de grand projets, deploiement rapide 0 down time
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small">Partager</Button>
+                <Button size="small">Voir demo</Button>
               </CardActions>
             </Card>
           </Grid>
         </Grid>
 
         <Box>
-          <Typography sx={{ mt: 3 }} variant="h3">
+          <Typography sx={{ mt: 3 }} variant="h4">
             nos clients
           </Typography>
         </Box>

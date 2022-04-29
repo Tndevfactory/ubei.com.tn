@@ -54,12 +54,11 @@ const SwiperClient = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Web- app
+              Entreprise psexpress
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Realisation des applications web pour des entreprises ou
-              particuliers comme des sites E-commerces, gestion de paie ou des
-              simple traceurs d'incidents ou connexion d'employees
+              en tant que vendeur B to B, je suis satisfait de la rapidite et
+              l'efficacite de l'equipe Tndev
             </Typography>
           </CardContent>
           <CardActions>
@@ -78,18 +77,12 @@ const SwiperClient = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Web- app
+              Entreprise Hitcom
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Realisation des applications web pour des entreprises ou
-              particuliers comme des sites E-commerces, gestion de paie ou des
-              simple traceurs d'incidents ou connexion d'employees
+              Je n'hesiterai pas a travailler encore avec cette equipe
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Partager</Button>
-            <Button size="small">Voir demo</Button>
-          </CardActions>
         </Card>
       </SwiperSlide>
       <SwiperSlide>
@@ -102,18 +95,12 @@ const SwiperClient = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Web- app
+              Etudiante Bjaoui Z [technopole Ensi Manouba]
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Realisation des applications web pour des entreprises ou
-              particuliers comme des sites E-commerces, gestion de paie ou des
-              simple traceurs d'incidents ou connexion d'employees
+              Encadrement efficace pour mon projet PFE smart-house
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Partager</Button>
-            <Button size="small">Voir demo</Button>
-          </CardActions>
         </Card>
       </SwiperSlide>
       <SwiperSlide>
@@ -126,18 +113,12 @@ const SwiperClient = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Web- app
+              Etudiante Ben Khelif O [Campus FST Manar]
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Realisation des applications web pour des entreprises ou
-              particuliers comme des sites E-commerces, gestion de paie ou des
-              simple traceurs d'incidents ou connexion d'employees
+              Merci pour l'accompagnement et les heures en meeting
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Partager</Button>
-            <Button size="small">Voir demo</Button>
-          </CardActions>
         </Card>
       </SwiperSlide>
       <SwiperSlide>
@@ -150,18 +131,13 @@ const SwiperClient = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Web- app
+              Entreprise SmartSkills
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Realisation des applications web pour des entreprises ou
-              particuliers comme des sites E-commerces, gestion de paie ou des
-              simple traceurs d'incidents ou connexion d'employees
+              Merci pour la mise a niveau du staff de la socite concernant la
+              partie Reactjs[context api]
             </Typography>
           </CardContent>
-          <CardActions>
-            <Button size="small">Partager</Button>
-            <Button size="small">Voir demo</Button>
-          </CardActions>
         </Card>
       </SwiperSlide>
     </Swiper>
