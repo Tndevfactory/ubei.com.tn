@@ -10,7 +10,7 @@ import Stack from "@mui/material/Stack";
 import { FormattedMessage, FormattedDate, FormattedTime } from "react-intl";
 import Link from "../components/Link";
 import { useRouter } from "next/router";
-
+import CircularProgress from "@mui/material/CircularProgress";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Snackbar from "@mui/material/Snackbar";
@@ -58,6 +58,9 @@ const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export default function Navbar() {
+  const [subject, setSubject] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -96,10 +99,6 @@ export default function Navbar() {
       handleCloseDialog();
     },
   });
-
-  console.log(formik.errors);
-
-  const [subject, setSubject] = React.useState("");
 
   const handleChangeSubject = (event) => {
     setSubject(event.target.value);
@@ -151,31 +150,20 @@ export default function Navbar() {
       subject: values.subject,
       message: values.message,
     };
-    console.log(params.name);
-    console.log(params.email);
-    console.log(params.phone);
-    console.log(params.message);
-    console.log(params.subject);
 
-    handleTriggerSnack();
+    setLoading(true);
 
-    // emailjs.send(cfg.service_id, cfg.template_id, params, cfg.user_ID).then(
-    //   (result) => {
-    //     console.log(result.text);
-
-    //     <Snackbar
-    //       open={openSnack}
-    //       autoHideDuration={6000}
-    //       onClose={handleCloseSnack}
-    //       message="envoye avec success"
-    //       action={actionSnack}
-    //     />;
-    //   },
-    //   (error) => {
-    //     console.log(error.text);
-    //   }
-    // );
-    //  e.target.reset();
+    emailjs.send(cfg.service_id, cfg.template_id, params, cfg.user_ID).then(
+      (result) => {
+        console.log(result.text);
+        handleTriggerSnack();
+        setLoading(false);
+      },
+      (error) => {
+        console.log(error.text);
+        setLoading(false);
+      }
+    );
 
     setOpenDialog(false);
     formik.resetForm();
@@ -427,8 +415,13 @@ export default function Navbar() {
                   onClick={handleClickOpenDialog}
                 >
                   <FormattedMessage id="contact-us" />
+                  {loading && (
+                    <CircularProgress sx={{ zIndex: 9999, mx: 2 }} size={18} />
+                  )}
                 </Typography>
               </Stack>
+
+              {loading && <CircularProgress sx={{ zIndex: 9999 }} />}
             </Grid>
             <Grid
               item
