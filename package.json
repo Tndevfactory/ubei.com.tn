@@ -22,6 +22,7 @@
     "axios": "^0.26.1",
     "emailjs-com": "^3.2.0",
     "form-data": "^4.0.0",
+    "formik": "^2.2.9",
     "framer-motion": "^6.2.9",
     "gsap": "^3.10.2",
     "install": "^0.13.0",
@@ -37,7 +38,8 @@
     "react-spring": "^9.4.4",
     "react-three-fiber": "^6.0.13",
     "swiper": "^8.1.0",
-    "three": "^0.139.2"
+    "three": "^0.139.2",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "eslint": "latest",

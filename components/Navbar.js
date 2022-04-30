@@ -47,12 +47,58 @@ import Select from "@mui/material/Select";
 import Tooltip from "@mui/material/Tooltip";
 
 import MuiAlert from "@mui/material/Alert";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
 export default function Navbar() {
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .max(15, "Must be 15 characters or less")
+        .required("required"),
+      email: Yup.string().email("Invalid Email address ").required("required"),
+      phone: Yup.string()
+        .required("required")
+        .matches(phoneRegExp, "Phone number is not valid")
+        .min(8, "to short")
+        .max(20, "to long"),
+      subject: Yup.string().required("required"),
+      message: Yup.string()
+        .max(350, "Must be 350 characters or less")
+        .required("required"),
+    }),
+    onSubmit: (values) => {
+      console.log(values);
+      handleSendEmailJs(values);
+    },
+    onReset: (values) => {
+      values = {
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      };
+      handleCloseDialog();
+    },
+  });
+
+  console.log(formik.errors);
+
   const [subject, setSubject] = React.useState("");
 
   const handleChangeSubject = (event) => {
@@ -91,9 +137,7 @@ export default function Navbar() {
   const handleClickOpenDialog = () => {
     setOpenDialog(true);
   };
-  const handleSendEmailJs = (e) => {
-    e.preventDefault();
-
+  const handleSendEmailJs = (values) => {
     const cfg = {
       service_id: "default_service",
       template_id: "template_926ocnr",
@@ -101,17 +145,18 @@ export default function Navbar() {
     };
 
     let params = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      phone: e.target.phone.value,
-      subject: subject,
-      message: e.target.message.value,
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      subject: values.subject,
+      message: values.message,
     };
     console.log(params.name);
     console.log(params.email);
     console.log(params.phone);
     console.log(params.message);
     console.log(params.subject);
+
     handleTriggerSnack();
 
     // emailjs.send(cfg.service_id, cfg.template_id, params, cfg.user_ID).then(
@@ -130,10 +175,10 @@ export default function Navbar() {
     //     console.log(error.text);
     //   }
     // );
-    e.target.reset();
-    setSubject("");
+    //  e.target.reset();
+
     setOpenDialog(false);
-    console.log(e);
+    formik.resetForm();
     return;
   };
 
@@ -481,7 +526,8 @@ export default function Navbar() {
       </div>
       <Dialog
         component="form"
-        onSubmit={handleSendEmailJs}
+        // onSubmit={ handleSendEmailJs}
+        onSubmit={formik.handleSubmit}
         open={openDialog}
         onClose={handleCloseDialog}
       >
@@ -491,28 +537,44 @@ export default function Navbar() {
 
         <DialogContent>
           <TextField
+            error={formik.touched.name && !!formik.errors.name}
+            helperText={formik.errors.name}
             autoFocus
             margin="dense"
             id="name"
             name="name"
+            value={formik.values.name}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             label="Nom"
             type="name"
             fullWidth
             variant="standard"
           />
+
           <TextField
+            error={formik.touched.email && !!formik.errors.email}
+            helperText={formik.errors.email}
             margin="dense"
             id="email"
             name="email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             label="Email"
-            type="email"
+            type="text"
             fullWidth
             variant="standard"
           />
           <TextField
+            error={formik.touched.phone && !!formik.errors.phone}
+            helperText={formik.errors.phone}
             margin="dense"
             id="phone"
             name="phone"
+            value={formik.values.phone}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             label="Telephone"
             type="text"
             fullWidth
@@ -522,10 +584,13 @@ export default function Navbar() {
           <FormControl variant="standard" sx={{ mt: 1, width: "100%" }}>
             <InputLabel id="sujetInput">Sujet</InputLabel>
             <Select
-              labelId="sujet"
-              id="sujet"
-              value={subject}
-              onChange={handleChangeSubject}
+              labelId="subject"
+              id="subject"
+              name="subject"
+              error={formik.touched.subject && !!formik.errors.subject}
+              value={formik.values.subject}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               label="Sujet"
             >
               <MenuItem value="">
@@ -538,10 +603,15 @@ export default function Navbar() {
           </FormControl>
           <TextField
             multiline
-            rows={3}
+            rows={5}
             margin="dense"
             id="message"
             name="message"
+            value={formik.values.message}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.message && !!formik.errors.message}
+            helperText={formik.errors.message}
             label="Demande"
             type="text"
             fullWidth
@@ -549,8 +619,17 @@ export default function Navbar() {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleCloseDialog}>Retour</Button>
-          <Button type="submit" variant="outlined">
+          {/* <Button type="reset" onClick={handleCloseDialog}>
+            Annuler
+          </Button> */}
+          <Button type="reset" onClick={formik.handleReset}>
+            Annuler
+          </Button>
+          <Button
+            disabled={!(formik.isValid && formik.dirty)}
+            type="submit"
+            variant="outlined"
+          >
             Envoyer
           </Button>
         </DialogActions>
@@ -561,8 +640,8 @@ export default function Navbar() {
         autoHideDuration={6000}
         onClose={handleCloseSnack}
         action={actionSnack}
-        TransitionComponent={Slide}
-        key={Slide}
+        TransitionComponent={Fade}
+        key={Fade}
       >
         <Alert
           onClose={handleCloseSnack}
