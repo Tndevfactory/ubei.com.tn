@@ -474,27 +474,27 @@ export default function Navbar() {
                 ))}
               </Menu>
 
-              <Button
+              {/* <Button
                 color="inherit"
-                sx={{ display: { xs: "none", md: "flex" } }}
+                sx={{ mx: 1, display: { xs: "none", md: "flex" } }}
               >
                 <FormattedMessage id="signin" />
               </Button>
               <Button
                 color="inherit"
-                sx={{ display: { xs: "none", md: "flex" } }}
+                sx={{ mx: 1, display: { xs: "none", md: "flex" } }}
               >
                 <FormattedMessage id="signup" />
-              </Button>
+              </Button> */}
 
               <Tooltip title="Login">
-                <IconButton sx={{ display: { xs: "flex", md: "none" } }}>
+                <IconButton sx={{ display: { xs: "flex", md: "flex" } }}>
                   <AccountCircleIcon sx={{ color: "white" }} />
                 </IconButton>
               </Tooltip>
 
               <Tooltip title="register">
-                <IconButton sx={{ display: { xs: "flex", md: "none" } }}>
+                <IconButton sx={{ display: { xs: "flex", md: "flex" } }}>
                   <AppRegistrationIcon sx={{ color: "white" }} />
                 </IconButton>
               </Tooltip>
