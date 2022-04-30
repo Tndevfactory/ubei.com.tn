@@ -1,7 +1,8 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
-import AccountTreeIcon from "@mui/icons-material/AccountTree";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
 
 function Item({ item }) {
@@ -64,8 +65,10 @@ export default function Carousel1() {
       autoPlay
       stopAutoPlayOnHover
       swipe
-      NextIcon={<AccountTreeIcon />}
-      PrevIcon={<AccountTreeIcon />}
+      animation="slide"
+      duration="3000"
+      NextIcon={<ArrowForwardIosIcon />}
+      PrevIcon={<ArrowBackIosIcon />}
       // next={(next, active) =>
       //   console.log(`we left ${active}, and are now at ${next}`)
       // }
