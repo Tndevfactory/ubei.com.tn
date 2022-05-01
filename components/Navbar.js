@@ -103,6 +103,15 @@ export default function Navbar() {
   const handleChangeSubject = (event) => {
     setSubject(event.target.value);
   };
+  //auth handler
+  const handleClickSignin = (e) => {
+    e.preventDefault();
+    router.push("/auth/signin");
+  };
+  const handleClickSignup = (e) => {
+    e.preventDefault();
+    router.push("/auth/signup");
+  };
   // snackbar
   const [openSnack, setOpenSnack] = React.useState(false);
 
@@ -473,13 +482,19 @@ export default function Navbar() {
               </Menu>
 
               <Tooltip title="Login">
-                <IconButton sx={{ display: { xs: "flex", md: "flex" } }}>
+                <IconButton
+                  sx={{ display: { xs: "flex", md: "flex" } }}
+                  onClick={handleClickSignin}
+                >
                   <AccountCircleIcon sx={{ color: "white" }} />
                 </IconButton>
               </Tooltip>
 
               <Tooltip title="register">
-                <IconButton sx={{ display: { xs: "flex", md: "flex" } }}>
+                <IconButton
+                  sx={{ display: { xs: "flex", md: "flex" } }}
+                  onClick={handleClickSignup}
+                >
                   <AppRegistrationIcon sx={{ color: "white" }} />
                 </IconButton>
               </Tooltip>

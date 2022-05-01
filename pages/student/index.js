@@ -3,16 +3,16 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import ProTip from "../components/ProTip";
-import Link from "../components/Link";
+import ProTip from "../../components/ProTip";
+import Link from "../../components/Link";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import Head from "next/head";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import ActiveLink from "../components/ActiveLink";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import BackToTop from "../components/BackToTop";
+import ActiveLink from "../../components/ActiveLink";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import BackToTop from "../../components/BackToTop";
 import { FormattedMessage, useIntl } from "react-intl";
 
 export default function Student() {
