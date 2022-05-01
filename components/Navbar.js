@@ -420,8 +420,6 @@ export default function Navbar() {
                   )}
                 </Typography>
               </Stack>
-
-              {loading && <CircularProgress sx={{ zIndex: 9999 }} />}
             </Grid>
             <Grid
               item
@@ -473,19 +471,6 @@ export default function Navbar() {
                   </MenuItem>
                 ))}
               </Menu>
-
-              {/* <Button
-                color="inherit"
-                sx={{ mx: 1, display: { xs: "none", md: "flex" } }}
-              >
-                <FormattedMessage id="signin" />
-              </Button>
-              <Button
-                color="inherit"
-                sx={{ mx: 1, display: { xs: "none", md: "flex" } }}
-              >
-                <FormattedMessage id="signup" />
-              </Button> */}
 
               <Tooltip title="Login">
                 <IconButton sx={{ display: { xs: "flex", md: "flex" } }}>
@@ -589,9 +574,13 @@ export default function Navbar() {
               <MenuItem value="">
                 <em></em>
               </MenuItem>
-              <MenuItem value={`App mobile`}>App mobile</MenuItem>
-              <MenuItem value={`E-commerce`}>E-commerce</MenuItem>
+              <MenuItem value={`mobile app`}>Mobile app</MenuItem>
+              <MenuItem value={`Website`}>Website</MenuItem>
               <MenuItem value={`E-software`}>Software</MenuItem>
+              <MenuItem value={`Design`}>Design</MenuItem>
+              <MenuItem value={`Training`}>Training</MenuItem>
+              <MenuItem value={`PFE`}>PFE</MenuItem>
+              <MenuItem value={`other`}>other- see details below</MenuItem>
             </Select>
           </FormControl>
           <TextField
