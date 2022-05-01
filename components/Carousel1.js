@@ -66,7 +66,7 @@ export default function Carousel1() {
       stopAutoPlayOnHover
       swipe
       // animation="slide"
-       duration="1500"
+       duration="2500"
       NextIcon={<ArrowForwardIosIcon />}
       PrevIcon={<ArrowBackIosIcon />}
       // next={(next, active) =>
