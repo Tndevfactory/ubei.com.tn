@@ -84,7 +84,7 @@ export default function Index() {
         />
       </Head>
       <Navbar />
-      <Container maxWidth="xl" sx={{ marginTop: "6rem" }}>
+      <Container maxWidth="xl" sx={{ marginTop: "5rem" }}>
         <BackToTop />
         <Box>
           <Carousel1 />
