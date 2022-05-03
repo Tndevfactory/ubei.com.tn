@@ -49,6 +49,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MuiAlert from "@mui/material/Alert";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -58,6 +59,12 @@ const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export default function Navbar() {
+  // menu
+  //menu design
+  const [anchorElDesign, setAnchorElDesign] = React.useState(null);
+  const openDesign = Boolean(anchorElDesign);
+
+  // loading
   const [subject, setSubject] = React.useState("");
   const [loading, setLoading] = React.useState(false);
 
@@ -371,11 +378,41 @@ export default function Navbar() {
                   </Typography>
                 </Link>
 
-                <Link href="/design" className="active">
-                  <Typography color="white">
+                {/* <Link href="/design" className="active"> */}
+                <div>
+                  <Typography
+                    id="basic-button"
+                    color="#fff"
+                    aria-controls={openDesign ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={openDesign ? "true" : undefined}
+                    onClick={(e) => setAnchorElDesign(e.currentTarget)}
+                    sx={{ cursor: "pointer", display: "flex" }}
+                  >
                     <FormattedMessage id="design" />
+                    <KeyboardArrowDownIcon sx={{ fontSize: 20, mt: 0.51 }} />
                   </Typography>
-                </Link>
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorElDesign}
+                    open={openDesign}
+                    onClose={() => setAnchorElDesign(null)}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                  >
+                    <MenuItem onClick={() => setAnchorElDesign(null)}>
+                      Manga art
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElDesign(null)}>
+                      Logo & Brand
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElDesign(null)}>
+                      3d Maya
+                    </MenuItem>
+                  </Menu>
+                </div>
+
                 <Link href="/web" className="active">
                   <Typography color="white">
                     <FormattedMessage id="web" />
