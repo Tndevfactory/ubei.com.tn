@@ -169,8 +169,7 @@ export default function ContactUs() {
         onClose={handleCloseDialog}
       >
         <DialogTitle sx={{ color: "#095e6d", textAlign: "center" }}>
-          Demande de devis
-          <FormattedMessage id="contact-us" />
+          <FormattedMessage id="ask-for-a-quote" />
         </DialogTitle>
 
         <DialogContent>
