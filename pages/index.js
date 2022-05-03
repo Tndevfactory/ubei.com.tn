@@ -21,6 +21,7 @@ import Button from "@mui/material/Button";
 import BackToTop from "../components/BackToTop";
 
 import SwiperClient from "../components/SwiperClient";
+import ContactUs from "../components/ContactUs";
 
 export default function Index() {
   const router = useRouter();
@@ -91,10 +92,10 @@ export default function Index() {
         </Box>
 
         <Box>
-          <Typography sx={{ mt: 1 }} component="h1" variant="h4">
+          <Typography sx={{ mt: 1 }} component="h1" variant="h5">
             notre savoir faire :
           </Typography>
-          <Typography sx={{ mt: 1 }} variant="body">
+          <Typography sx={{ mt: 1 }} variant="caption">
             [Email: demo@demo.tn] [password: demo@demo.tn]
           </Typography>
         </Box>
@@ -190,7 +191,7 @@ export default function Index() {
         </Grid>
 
         <Box>
-          <Typography sx={{ mt: 3 }} variant="h4">
+          <Typography sx={{ mt: 3 }} variant="h5">
             nos produits
           </Typography>
         </Box>
@@ -285,13 +286,14 @@ export default function Index() {
         </Grid>
 
         <Box>
-          <Typography sx={{ mt: 3 }} variant="h4">
+          <Typography sx={{ mt: 3 }} variant="h5">
             nos clients
           </Typography>
         </Box>
 
         <SwiperClient />
       </Container>
+      <ContactUs />
       <Footer />
     </>
   );

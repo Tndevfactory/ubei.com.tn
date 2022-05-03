@@ -22,7 +22,7 @@ const SwiperClient = () => {
       autoplay
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // scrollbar={{ draggable: true }}
       // onSwiper={(swiper) => console.log(swiper)}
       // onSlideChange={() => console.log("slide change")}
       breakpoints={{
@@ -52,7 +52,7 @@ const SwiperClient = () => {
             alt="Entreprise psexpress"
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="body" component="div">
               Entreprise psexpress
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -70,7 +70,7 @@ const SwiperClient = () => {
             alt="Entreprise Hitcom"
           />
           <CardContent>
-            <Typography gutterBottom variant="h6" component="div">
+            <Typography gutterBottom variant="body" component="div">
               Entreprise Hitcom
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -87,8 +87,8 @@ const SwiperClient = () => {
             alt="Etudiante Bjaoui"
           />
           <CardContent>
-            <Typography gutterBottom variant="h6" component="div">
-              Etudiante Bjaoui Z [technopole Ensi Manouba]
+            <Typography gutterBottom variant="body" component="div">
+              Etudiante Bjaoui- Ensi Manouba
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Encadrement efficace pour mon projet PFE smart-house
@@ -104,8 +104,8 @@ const SwiperClient = () => {
             alt=" Etudiante Ben Khelif"
           />
           <CardContent>
-            <Typography gutterBottom variant="h6" component="div">
-              Etudiante Ben Khelif O [Campus FST Manar]
+            <Typography gutterBottom variant="body" component="div">
+              Etudiante Ben Khelif- Campus Manar
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Merci pour l'accompagnement et les heures en meeting
@@ -121,7 +121,7 @@ const SwiperClient = () => {
             alt="Entreprise SmartSkills"
           />
           <CardContent>
-            <Typography gutterBottom variant="h6" component="div">
+            <Typography gutterBottom variant="body" component="div">
               Entreprise SmartSkills
             </Typography>
             <Typography variant="body2" color="text.secondary">

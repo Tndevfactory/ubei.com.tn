@@ -90,7 +90,6 @@ export default function Carousel1() {
           <Item key={i} item={item} />
         ))}
       </Carousel>
-      <ContactUs />
     </>
   );
 }
