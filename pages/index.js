@@ -96,7 +96,7 @@ export default function Index() {
             notre savoir faire :
           </Typography>
           <Typography sx={{ mt: 1 }} variant="caption">
-            [Email: demo@demo.tn] [password: demo@demo.tn]
+            Email: demo@demo.com - Password: demo@demo.com
           </Typography>
         </Box>
 
