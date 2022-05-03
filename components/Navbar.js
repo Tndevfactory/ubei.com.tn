@@ -648,6 +648,7 @@ export default function Navbar() {
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
+                onMouseEnter={handleClick}
               >
                 <span style={{ fontSize: "1.2rem" }}>
                   {router.locale == "ar"
