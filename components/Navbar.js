@@ -402,6 +402,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={openDesign ? "true" : undefined}
                     onClick={(e) => setAnchorElDesign(e.currentTarget)}
+                    onMouseEnter={(e) => setAnchorElDesign(e.currentTarget)}
                     sx={{ cursor: "pointer", display: "flex" }}
                   >
                     <FormattedMessage id="design" />
@@ -436,6 +437,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={openWeb ? "true" : undefined}
                     onClick={(e) => setAnchorElWeb(e.currentTarget)}
+                    onMouseEnter={(e) => setAnchorElWeb(e.currentTarget)}
                     sx={{ cursor: "pointer", display: "flex" }}
                   >
                     <FormattedMessage id="web" />
@@ -469,6 +471,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={openMobile ? "true" : undefined}
                     onClick={(e) => setAnchorElMobile(e.currentTarget)}
+                    onMouseEnter={(e) => setAnchorElMobile(e.currentTarget)}
                     sx={{ cursor: "pointer", display: "flex" }}
                   >
                     <FormattedMessage id="mobile" />
@@ -502,6 +505,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={openSoftware ? "true" : undefined}
                     onClick={(e) => setAnchorElSoftware(e.currentTarget)}
+                    onMouseEnter={(e) => setAnchorElSoftware(e.currentTarget)}
                     sx={{ cursor: "pointer", display: "flex" }}
                   >
                     <FormattedMessage id="software" />
@@ -536,6 +540,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={openFormation ? "true" : undefined}
                     onClick={(e) => setAnchorElFormation(e.currentTarget)}
+                    onMouseEnter={(e) => setAnchorElFormation(e.currentTarget)}
                     sx={{ cursor: "pointer", display: "flex" }}
                   >
                     <FormattedMessage id="training" />
@@ -572,6 +577,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={openStudent ? "true" : undefined}
                     onClick={(e) => setAnchorElStudent(e.currentTarget)}
+                    onMouseEnter={(e) => setAnchorElStudent(e.currentTarget)}
                     sx={{ cursor: "pointer", display: "flex" }}
                   >
                     <FormattedMessage id="student" />
