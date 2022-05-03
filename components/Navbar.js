@@ -64,6 +64,21 @@ export default function Navbar() {
   const [anchorElDesign, setAnchorElDesign] = React.useState(null);
   const openDesign = Boolean(anchorElDesign);
 
+  const [anchorElWeb, setAnchorElWeb] = React.useState(null);
+  const openWeb = Boolean(anchorElWeb);
+
+  const [anchorElMobile, setAnchorElMobile] = React.useState(null);
+  const openMobile = Boolean(anchorElMobile);
+
+  const [anchorElSoftware, setAnchorElSoftware] = React.useState(null);
+  const openSoftware = Boolean(anchorElSoftware);
+
+  const [anchorElFormation, setAnchorElFormation] = React.useState(null);
+  const openFormation = Boolean(anchorElFormation);
+
+  const [anchorElStudent, setAnchorElStudent] = React.useState(null);
+  const openStudent = Boolean(anchorElStudent);
+
   // loading
   const [subject, setSubject] = React.useState("");
   const [loading, setLoading] = React.useState(false);
@@ -381,7 +396,7 @@ export default function Navbar() {
                 {/* <Link href="/design" className="active"> */}
                 <div>
                   <Typography
-                    id="basic-button"
+                    id="basic-button-design"
                     color="#fff"
                     aria-controls={openDesign ? "basic-menu" : undefined}
                     aria-haspopup="true"
@@ -413,32 +428,175 @@ export default function Navbar() {
                   </Menu>
                 </div>
 
-                <Link href="/web" className="active">
-                  <Typography color="white">
+                <div>
+                  <Typography
+                    id="basic-button-web"
+                    color="#fff"
+                    aria-controls={openWeb ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={openWeb ? "true" : undefined}
+                    onClick={(e) => setAnchorElWeb(e.currentTarget)}
+                    sx={{ cursor: "pointer", display: "flex" }}
+                  >
                     <FormattedMessage id="web" />
+                    <KeyboardArrowDownIcon sx={{ fontSize: 20, mt: 0.51 }} />
                   </Typography>
-                </Link>
-                <Link href="/mobile" className="active">
-                  <Typography color="white">
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorElWeb}
+                    open={openWeb}
+                    onClose={() => setAnchorElWeb(null)}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                  >
+                    <MenuItem onClick={() => setAnchorElWeb(null)}>
+                      Frontend - Reactjs
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElWeb(null)}>
+                      Java Spring-boot
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElWeb(null)}>
+                      CMS - Wordpress
+                    </MenuItem>
+                  </Menu>
+                </div>
+                <div>
+                  <Typography
+                    id="basic-button-mobile"
+                    color="#fff"
+                    aria-controls={openMobile ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={openMobile ? "true" : undefined}
+                    onClick={(e) => setAnchorElMobile(e.currentTarget)}
+                    sx={{ cursor: "pointer", display: "flex" }}
+                  >
                     <FormattedMessage id="mobile" />
+                    <KeyboardArrowDownIcon sx={{ fontSize: 20, mt: 0.51 }} />
                   </Typography>
-                </Link>
-                <Link href="/software" className="active">
-                  <Typography color="white">
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorElMobile}
+                    open={openMobile}
+                    onClose={() => setAnchorElMobile(null)}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                  >
+                    <MenuItem onClick={() => setAnchorElMobile(null)}>
+                      React-native
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElMobile(null)}>
+                      Kotlin
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElMobile(null)}>
+                      Flutter
+                    </MenuItem>
+                  </Menu>
+                </div>
+                <div>
+                  <Typography
+                    id="basic-button-software"
+                    color="#fff"
+                    aria-controls={openSoftware ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={openSoftware ? "true" : undefined}
+                    onClick={(e) => setAnchorElSoftware(e.currentTarget)}
+                    sx={{ cursor: "pointer", display: "flex" }}
+                  >
                     <FormattedMessage id="software" />
+                    <KeyboardArrowDownIcon sx={{ fontSize: 20, mt: 0.51 }} />
                   </Typography>
-                </Link>
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorElSoftware}
+                    open={openSoftware}
+                    onClose={() => setAnchorElSoftware(null)}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                  >
+                    <MenuItem onClick={() => setAnchorElSoftware(null)}>
+                      Python Tkinter
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElSoftware(null)}>
+                      Java Fx
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElSoftware(null)}>
+                      .net core
+                    </MenuItem>
+                  </Menu>
+                </div>
 
-                <Link href="/training" className="active">
-                  <Typography color="white">
+                <div>
+                  <Typography
+                    id="basic-button-formation"
+                    color="#fff"
+                    aria-controls={openFormation ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={openFormation ? "true" : undefined}
+                    onClick={(e) => setAnchorElFormation(e.currentTarget)}
+                    sx={{ cursor: "pointer", display: "flex" }}
+                  >
                     <FormattedMessage id="training" />
+                    <KeyboardArrowDownIcon sx={{ fontSize: 20, mt: 0.51 }} />
                   </Typography>
-                </Link>
-                <Link href="/student" className="active">
-                  <Typography color="white">
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorElFormation}
+                    open={openFormation}
+                    onClose={() => setAnchorElFormation(null)}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                  >
+                    <MenuItem onClick={() => setAnchorElFormation(null)}>
+                      Marketing digital
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElFormation(null)}>
+                      Laravel
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElFormation(null)}>
+                      Symfony
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElFormation(null)}>
+                      Node-js
+                    </MenuItem>
+                  </Menu>
+                </div>
+                <div>
+                  <Typography
+                    id="basic-button-student"
+                    color="#fff"
+                    aria-controls={openStudent ? "basic-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={openStudent ? "true" : undefined}
+                    onClick={(e) => setAnchorElStudent(e.currentTarget)}
+                    sx={{ cursor: "pointer", display: "flex" }}
+                  >
                     <FormattedMessage id="student" />
+                    <KeyboardArrowDownIcon sx={{ fontSize: 20, mt: 0.51 }} />
                   </Typography>
-                </Link>
+                  <Menu
+                    id="basic-menu"
+                    anchorEl={anchorElStudent}
+                    open={openStudent}
+                    onClose={() => setAnchorElStudent(null)}
+                    MenuListProps={{
+                      "aria-labelledby": "basic-button",
+                    }}
+                  >
+                    <MenuItem onClick={() => setAnchorElStudent(null)}>
+                      PFE
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElStudent(null)}>
+                      Memoire
+                    </MenuItem>
+                    <MenuItem onClick={() => setAnchorElStudent(null)}>
+                      Master
+                    </MenuItem>
+                  </Menu>
+                </div>
                 <Link href="/blog" className="active">
                   <Typography color="white">
                     <FormattedMessage id="blog" />
