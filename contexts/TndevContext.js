@@ -43,6 +43,7 @@ export const TndevProvider = ({ children }) => {
 
   const [darkColor, setDarkColor] = useState("0");
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [openDialog, setOpenDialog] = React.useState(false);
 
   const color = {
     lightBlue: "#337bae",
@@ -62,6 +63,8 @@ export const TndevProvider = ({ children }) => {
     color,
     openDrawer,
     setOpenDrawer,
+    openDialog,
+    setOpenDialog,
   };
 
   return (

@@ -4,8 +4,13 @@ import { Paper, Button } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
+import { TndevCtx } from "../contexts/TndevContext";
+import { FormattedMessage, FormattedDate, FormattedTime } from "react-intl";
+import ContactUs from "./ContactUs";
 
 function Item({ item }) {
+  const [methods, states] = TndevCtx();
+  const { openDialog, setOpenDialog } = states;
   return (
     <div
       style={{
@@ -33,14 +38,18 @@ function Item({ item }) {
         color="error"
         className="CheckButton mb-3"
         variant="contained"
+        onClick={() => setOpenDialog(true)}
       >
-        voir plus
+        <FormattedMessage id="contact-us" />
       </Button>
     </div>
   );
 }
 
 export default function Carousel1() {
+  const [methods, states] = TndevCtx();
+  const { openDialog, setOpenDialog } = states;
+
   var items = [
     {
       name: "Rapidite et efficacite",
@@ -61,24 +70,27 @@ export default function Carousel1() {
   ];
 
   return (
-    <Carousel
-      autoPlay
-      stopAutoPlayOnHover
-      swipe
-      // animation="slide"
-       duration="4500"
-      NextIcon={<ArrowForwardIosIcon />}
-      PrevIcon={<ArrowBackIosIcon />}
-      // next={(next, active) =>
-      //   console.log(`we left ${active}, and are now at ${next}`)
-      // }
-      // prev={(prev, active) =>
-      //   console.log(`we left ${active}, and are now at ${prev}`)
-      // }
-    >
-      {items.map((item, i) => (
-        <Item key={i} item={item} />
-      ))}
-    </Carousel>
+    <>
+      <Carousel
+        autoPlay={false}
+        stopAutoPlayOnHover
+        swipe
+        animation="slide"
+        duration="4500"
+        NextIcon={<ArrowForwardIosIcon />}
+        PrevIcon={<ArrowBackIosIcon />}
+        // next={(next, active) =>
+        //   console.log(`we left ${active}, and are now at ${next}`)
+        // }
+        // prev={(prev, active) =>
+        //   console.log(`we left ${active}, and are now at ${prev}`)
+        // }
+      >
+        {items.map((item, i) => (
+          <Item key={i} item={item} />
+        ))}
+      </Carousel>
+      <ContactUs />
+    </>
   );
 }
