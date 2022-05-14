@@ -58,7 +58,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-export default function Navbar() {
+export default function NavbarHeader() {
   // menu
   //menu design
   const [anchorElDesign, setAnchorElDesign] = React.useState(null);
@@ -233,112 +233,11 @@ export default function Navbar() {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor) => (
-    <Box
-      role="presentation"
-      sx={{ width: "200px" }}
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        <ListItem button>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <Link href="/" className="active">
-            <ListItemText>
-              {" "}
-              <FormattedMessage id="home" />
-            </ListItemText>
-          </Link>
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <Link href="/design" className="active">
-            <ListItemText>
-              {" "}
-              <FormattedMessage id="design" />
-            </ListItemText>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <Link href="/web" className="active">
-            <ListItemText>
-              {" "}
-              <FormattedMessage id="web" />
-            </ListItemText>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <Link href="/mobile" className="active">
-            <ListItemText>
-              {" "}
-              <FormattedMessage id="mobile" />
-            </ListItemText>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <Link href="/software" className="active">
-            <ListItemText>
-              {" "}
-              <FormattedMessage id="software" />
-            </ListItemText>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-          <Link href="/blog" className="active">
-            <ListItemText>
-              {" "}
-              <FormattedMessage id="blog" />
-            </ListItemText>
-          </Link>
-        </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon>
-
-          <Typography
-            sx={{
-              background: "orange",
-              padding: "2px",
-              borderRadius: "6px",
-              textDecoration: "none",
-              boxShadow: "none",
-              cursor: "pointer",
-            }}
-            onClick={handleClickOpenDialog}
-            color="white"
-          >
-            <FormattedMessage id="contact-us" />
-          </Typography>
-        </ListItem>
-      </List>
-    </Box>
-  );
-
   return (
     <>
-      <AppBar position="static" sx={{ bgcolor: "white", color: "#333" }}>
+      <AppBar position="static">
         <Toolbar>
-          <Grid container spacing={1} sx={{ color: "#333" }}>
+          <Grid container spacing={1} sx={{ color: "white" }}>
             <Grid
               item
               xs={2}
@@ -367,7 +266,7 @@ export default function Navbar() {
               />
 
               <Typography variant="h6" component="h5" sx={{ display: "block" }}>
-                <FormattedMessage id="UBEI" />
+                <FormattedMessage id="Vendre sur UBEI" />
               </Typography>
             </Grid>
             <Grid
@@ -389,7 +288,7 @@ export default function Navbar() {
                 alignItems: "center",
               }}
             >
-              {/* <Button
+              <Button
                 color="secondary"
                 id="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
@@ -429,185 +328,11 @@ export default function Navbar() {
                     </Link>
                   </MenuItem>
                 ))}
-              </Menu> */}
-
-              <Tooltip title="Login">
-                <IconButton
-                  sx={{ display: { xs: "flex", md: "flex" } }}
-                  onClick={handleClickSignin}
-                >
-                  <AccountCircleIcon sx={{ color: "#333" }} />
-                </IconButton>
-              </Tooltip>
-
-              <Tooltip title="Login">
-                <IconButton
-                  sx={{ display: { xs: "flex", md: "flex" } }}
-                  onClick={handleClickSignin}
-                >
-                  <AccountCircleIcon sx={{ color: "#333" }} />
-                </IconButton>
-              </Tooltip>
-
-              <Tooltip title="register">
-                <IconButton
-                  sx={{ display: { xs: "flex", md: "flex" } }}
-                  onClick={handleClickSignup}
-                >
-                  <AppRegistrationIcon sx={{ color: "#333" }} />
-                </IconButton>
-              </Tooltip>
+              </Menu>
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
-      <div className=" drawer-core" style={{ width: "50%" }}>
-        {["left", "right"].map((anchor) => (
-          <React.Fragment key={anchor}>
-            {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
-            <SwipeableDrawer
-              anchor={anchor}
-              open={state[anchor]}
-              onClose={toggleDrawer(anchor, false)}
-              onOpen={toggleDrawer(anchor, true)}
-            >
-              {list(anchor)}
-            </SwipeableDrawer>
-          </React.Fragment>
-        ))}
-      </div>
-      <Dialog
-        component="form"
-        // onSubmit={ handleSendEmailJs}
-        onSubmit={formik.handleSubmit}
-        open={openDialog}
-        onClose={handleCloseDialog}
-      >
-        <DialogTitle sx={{ color: "#095e6d", textAlign: "center" }}>
-          <FormattedMessage id="ask-for-a-quote" />
-        </DialogTitle>
-
-        <DialogContent>
-          <TextField
-            error={formik.touched.name && !!formik.errors.name}
-            helperText={formik.errors.name}
-            autoFocus
-            margin="dense"
-            id="name"
-            name="name"
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            label="Nom"
-            type="name"
-            fullWidth
-            variant="standard"
-          />
-
-          <TextField
-            error={formik.touched.email && !!formik.errors.email}
-            helperText={formik.errors.email}
-            margin="dense"
-            id="email"
-            name="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            label="Email"
-            type="text"
-            fullWidth
-            variant="standard"
-          />
-          <TextField
-            error={formik.touched.phone && !!formik.errors.phone}
-            helperText={formik.errors.phone}
-            margin="dense"
-            id="phone"
-            name="phone"
-            value={formik.values.phone}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            label="Telephone"
-            type="text"
-            fullWidth
-            variant="standard"
-          />
-
-          <FormControl variant="standard" sx={{ mt: 1, width: "100%" }}>
-            <InputLabel id="sujetInput">Sujet</InputLabel>
-            <Select
-              labelId="subject"
-              id="subject"
-              name="subject"
-              error={formik.touched.subject && !!formik.errors.subject}
-              value={formik.values.subject}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              label="Sujet"
-            >
-              <MenuItem value="">
-                <em></em>
-              </MenuItem>
-              <MenuItem value={`mobile app`}>Mobile app</MenuItem>
-              <MenuItem value={`Website`}>Website</MenuItem>
-              <MenuItem value={`E-software`}>Software</MenuItem>
-              <MenuItem value={`Design`}>Design</MenuItem>
-              <MenuItem value={`Training`}>Training</MenuItem>
-              <MenuItem value={`PFE`}>PFE</MenuItem>
-              <MenuItem value={`other`}>other- see details below</MenuItem>
-            </Select>
-          </FormControl>
-          <TextField
-            multiline
-            rows={5}
-            margin="dense"
-            id="message"
-            name="message"
-            value={formik.values.message}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            error={formik.touched.message && !!formik.errors.message}
-            helperText={formik.errors.message}
-            label="Demande"
-            type="text"
-            fullWidth
-            variant="standard"
-          />
-        </DialogContent>
-        <DialogActions>
-          {/* <Button type="reset" onClick={handleCloseDialog}>
-            Annuler
-          </Button> */}
-          <Button type="reset" onClick={formik.handleReset}>
-            Annuler
-          </Button>
-          <Button
-            disabled={!(formik.isValid && formik.dirty)}
-            type="submit"
-            variant="outlined"
-          >
-            Envoyer
-          </Button>
-        </DialogActions>
-      </Dialog>
-      <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        open={openSnack}
-        autoHideDuration={6000}
-        onClose={handleCloseSnack}
-        action={actionSnack}
-        TransitionComponent={Fade}
-        key={Fade}
-      >
-        <Alert
-          onClose={handleCloseSnack}
-          severity="success"
-          sx={{ width: "100%" }}
-        >
-          Sent with success, our team will contact in 48 hours !
-        </Alert>
-      </Snackbar>
-      <div id="back-to-top-anchor"></div>
     </>
   );
 }

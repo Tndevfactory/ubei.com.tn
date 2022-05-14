@@ -22,6 +22,7 @@ import BackToTop from "../components/BackToTop";
 
 import SwiperClient from "../components/SwiperClient";
 import ContactUs from "../components/ContactUs";
+import NavbarHeader from "../components/NavbarHeader";
 
 export default function Index() {
   const router = useRouter();
@@ -30,7 +31,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Tndev Art</title>
+        <title>UBEI</title>
         <meta
           name="google-site-verification"
           content="oWPG0Wtv_qIrPDPKZNXlIHgtAD7TnKYAE_ptUSEwP2o"
@@ -84,8 +85,9 @@ export default function Index() {
           }}
         />
       </Head>
+      <NavbarHeader />
       <Navbar />
-      <Container maxWidth="xl" sx={{ marginTop: "5rem" }}>
+      <Container maxWidth="xl" sx={{ marginTop: "3rem" }}>
         <BackToTop />
         <Box>
           <Carousel1 />
