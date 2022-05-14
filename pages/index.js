@@ -19,7 +19,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import BackToTop from "../components/BackToTop";
-
+import { motion } from "framer-motion";
 import SwiperClient from "../components/SwiperClient";
 import ContactUs from "../components/ContactUs";
 import NavbarHeader from "../components/NavbarHeader";
@@ -94,102 +94,73 @@ export default function Index() {
         </Box>
 
         <Box>
-          <Typography sx={{ mt: 1 }} component="h1" variant="h5">
-            notre savoir faire :
-          </Typography>
-          <Typography sx={{ mt: 1 }} variant="caption">
-            Email: demo@demo.com - Password: demo@demo.com
+          <Typography sx={{ mt: 1 }} component="h1" variant="h4" gutterBottom>
+            Nouveautés :
           </Typography>
         </Box>
 
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="/static/images/cards/java.png"
-                alt="Web-application"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="h2">
-                  Web-application
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Realisation des applications web pour des entreprises ou
-                  particuliers comme des sites E-commerces, gestion de paie ou
-                  des simple traceurs d'incidents ou connexion d'employees
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Partager</Button>
-                <Button size="small">Voir demo</Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="/static/images/cards/mobile.png"
-                alt="Mobile"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Mobile
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Des solutions en React natif comme en flutter
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Partager</Button>
-                <Button size="small">Voir demo</Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="/static/images/cards/software.png"
-                alt="Softwares"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Softwares
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Des solutions en Electron.js ou python sont disponibles
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Partager</Button>
-                <Button size="small">Voir demo</Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="/static/images/cards/student.png"
-                alt="students"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Etudiants
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Des formations en backend comme en frontend et accompagnement
-                  PFE disponibles
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Partager</Button>
-                <Button size="small">Voir demo</Button>
-              </CardActions>
-            </Card>
-          </Grid>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <Grid item xs={6} sm={6} md={2}>
+              <Card
+                component={motion.div}
+                whileHover={{
+                  scale: 1.05,
+                }}
+                whileTap={{ scale: 0.9 }}
+                sx={{ cursor: "pointer", boxShadow: 3 }}
+              >
+                <CardMedia
+                  component="img"
+                  image="/static/images/products/p47.webp"
+                  alt="p47"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h6" component="h2">
+                    Casque-P47
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Casque P47, 30 décibels, hifi de marque xelo ...
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    component={motion.button}
+                    whileHover={{
+                      scale: 1.02,
+                      color: "#0D2C54",
+                      transition: { duration: 0.2 },
+                    }}
+                  >
+                    details
+                  </Button>
+                  <Button
+                    size="small"
+                    component={motion.button}
+                    whileHover={{
+                      scale: 1.025,
+                      color: "#0D2C54",
+                      transition: { duration: 0.2 },
+                    }}
+                  >
+                    acheter{" "}
+                  </Button>
+                  <Button
+                    size="small"
+                    component={motion.button}
+                    whileHover={{
+                      scale: 1.02,
+                      color: "#0D2C54",
+                      transition: { duration: 0.2 },
+                    }}
+                  >
+                    wishlist{" "}
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
 
         <Box>
