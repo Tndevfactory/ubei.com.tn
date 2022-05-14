@@ -94,13 +94,20 @@ export default function Index() {
         </Box>
 
         <Box>
-          <Typography sx={{ mt: 1 }} component="h1" variant="h4" gutterBottom>
+          <Typography sx={{ mt: 3 }} variant="h4" gutterBottom>
+            Offre du jour
+          </Typography>
+        </Box>
+
+        <SwiperClient />
+        <Box>
+          <Typography sx={{ mt: 3 }} component="h1" variant="h4" gutterBottom>
             Nouveautés :
           </Typography>
         </Box>
 
         <Grid container spacing={2}>
-          {[1, 2, 3, 4, 5, 6].map((i) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
             <Grid item xs={6} sm={6} md={2}>
               <Card
                 component={motion.div}
@@ -130,7 +137,7 @@ export default function Index() {
                     whileHover={{
                       scale: 1.02,
                       color: "#0D2C54",
-                      transition: { duration: 0.2 },
+                      transition: { duration: 0.1 },
                     }}
                   >
                     details
@@ -141,7 +148,7 @@ export default function Index() {
                     whileHover={{
                       scale: 1.025,
                       color: "#0D2C54",
-                      transition: { duration: 0.2 },
+                      transition: { duration: 0.1 },
                     }}
                   >
                     acheter{" "}
@@ -152,7 +159,7 @@ export default function Index() {
                     whileHover={{
                       scale: 1.02,
                       color: "#0D2C54",
-                      transition: { duration: 0.2 },
+                      transition: { duration: 0.1 },
                     }}
                   >
                     wishlist{" "}
@@ -162,109 +169,6 @@ export default function Index() {
             </Grid>
           ))}
         </Grid>
-
-        <Box>
-          <Typography sx={{ mt: 3 }} variant="h5">
-            nos produits
-          </Typography>
-        </Box>
-
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="/static/images/cards/springboot.png"
-                alt="Spring-boot"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Spring-boot
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  La force et la securite de java, moderne microservice
-                  application
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Partager</Button>
-                <Button size="small">Voir demo</Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="/static/images/cards/flask.png"
-                alt="green iguana"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Python Flask
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  L'efficacite de flask et son rapide integration avec les IOT
-                  telque rasberry pie ou STM
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Partager</Button>
-                <Button size="small">Voir demo</Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="/static/images/cards/dotnet.png"
-                alt=".net"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  .net
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  La fonctionnalite de c# et son integration facile avec VR
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Partager</Button>
-                <Button size="small">Voir demo</Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
-              <CardMedia
-                component="img"
-                image="/static/images/cards/ruby.png"
-                alt="Ruby"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  Ruby
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Gestion de grand projets, deploiement rapide 0 down time
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small">Partager</Button>
-                <Button size="small">Voir demo</Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Grid>
-
-        <Box>
-          <Typography sx={{ mt: 3 }} variant="h5">
-            nos clients
-          </Typography>
-        </Box>
-
-        <SwiperClient />
       </Container>
       <ContactUs />
       <Footer />

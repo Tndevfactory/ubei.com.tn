@@ -87,8 +87,8 @@ export default function Navbar() {
           >
             <Typography>Facebook</Typography>
 
-            <Link href="https://www.facebook.com/TndevArt">
-              https://www.facebook.com/TndevArt
+            <Link href="https://www.facebook.com">
+              https://www.facebook.com/UBEI
             </Link>
           </Grid>
           <Grid
