@@ -38,7 +38,7 @@ export default function Navbar() {
           >
             <Avatar
               alt="Remy Sharp"
-              src="/static/images/logo/logo.png"
+              src="/static/images/logo/logo.svg"
               sx={{ mx: 0.5, width: 38, height: 38 }}
             />
 
@@ -53,7 +53,7 @@ export default function Navbar() {
                 fontSize: "1.3rem",
               }}
             >
-              TndevArt
+              UBEI
             </Typography>
           </Grid>
 
@@ -69,9 +69,9 @@ export default function Navbar() {
               alignItems: "start",
             }}
           >
-            <Typography>Email: team@tndev-art.com</Typography>
+            <Typography>Email: sale@ubei.com.tn</Typography>
 
-            <Typography>Telephone: +216 55 38 54 74</Typography>
+            <Typography>Telephone: +216 55 38 53 74</Typography>
           </Grid>
           <Grid
             item
@@ -102,13 +102,7 @@ export default function Navbar() {
               justifyContent: "center",
               alignItems: "start",
             }}
-          >
-            <Typography>Recrutement:</Typography>
-
-            <Link href="https://www.linkedin.com/in/tndev-art-325325184/">
-              https://www.linkedin.com/in/tndev-art-325325184/
-            </Link>
-          </Grid>
+          ></Grid>
         </Grid>
         <Typography
           variant="body2"
@@ -119,7 +113,7 @@ export default function Navbar() {
           <MuiLink
             sx={{ textDecoration: "none" }}
             color="inherit"
-            href="https://tndev-art.com"
+            href="https://tndev-art.tn"
           >
             Tndev-art.com
           </MuiLink>{" "}

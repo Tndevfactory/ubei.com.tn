@@ -11,7 +11,6 @@ import Zoom from "@mui/material/Zoom";
 
 function ScrollTop(props) {
   const { children, window } = props;
-
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
@@ -49,7 +48,7 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
-export default function BackToTop(props) {
+export default function NavbarScrollTriger(props) {
   return (
     <React.Fragment>
       <CssBaseline />
